@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/website-mazeqube/static/css/main.a617e044.chunk.css",
-    "main.js": "/website-mazeqube/static/js/main.5e79f34a.chunk.js",
-    "main.js.map": "/website-mazeqube/static/js/main.5e79f34a.chunk.js.map",
-    "runtime-main.js": "/website-mazeqube/static/js/runtime-main.70426896.js",
-    "runtime-main.js.map": "/website-mazeqube/static/js/runtime-main.70426896.js.map",
-    "static/js/2.67a0e7ed.chunk.js": "/website-mazeqube/static/js/2.67a0e7ed.chunk.js",
-    "static/js/2.67a0e7ed.chunk.js.map": "/website-mazeqube/static/js/2.67a0e7ed.chunk.js.map",
-    "static/js/3.933d41b3.chunk.js": "/website-mazeqube/static/js/3.933d41b3.chunk.js",
-    "static/js/3.933d41b3.chunk.js.map": "/website-mazeqube/static/js/3.933d41b3.chunk.js.map",
-    "index.html": "/website-mazeqube/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/website-mazeqube/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.67a0e7ed.chunk.js.LICENSE.txt": "/website-mazeqube/static/js/2.67a0e7ed.chunk.js.LICENSE.txt",
-    "static/media/bg-about-us.cf9a123e.jpg": "/website-mazeqube/static/media/bg-about-us.cf9a123e.jpg",
-    "static/media/blog2.aba7a3cb.jpg": "/website-mazeqube/static/media/blog2.aba7a3cb.jpg",
-    "static/media/logo-coinbase.87e91c7f.svg": "/website-mazeqube/static/media/logo-coinbase.87e91c7f.svg",
-    "static/media/logo-nasa.c5d11f88.svg": "/website-mazeqube/static/media/logo-nasa.c5d11f88.svg",
-    "static/media/logo-netflix.432ed6b5.svg": "/website-mazeqube/static/media/logo-netflix.432ed6b5.svg",
-    "static/media/logo-pinterest.84470903.svg": "/website-mazeqube/static/media/logo-pinterest.84470903.svg",
-    "static/media/logo-spotify.7e255dc6.svg": "/website-mazeqube/static/media/logo-spotify.7e255dc6.svg",
-    "static/media/logo-vodafone.b3e8486c.svg": "/website-mazeqube/static/media/logo-vodafone.b3e8486c.svg"
+    "main.css": "/static/css/main.a617e044.chunk.css",
+    "main.js": "/static/js/main.8ecdf8b5.chunk.js",
+    "main.js.map": "/static/js/main.8ecdf8b5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c01c9e6d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c01c9e6d.js.map",
+    "static/js/2.d7746dfd.chunk.js": "/static/js/2.d7746dfd.chunk.js",
+    "static/js/2.d7746dfd.chunk.js.map": "/static/js/2.d7746dfd.chunk.js.map",
+    "static/js/3.933d41b3.chunk.js": "/static/js/3.933d41b3.chunk.js",
+    "static/js/3.933d41b3.chunk.js.map": "/static/js/3.933d41b3.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.d7746dfd.chunk.js.LICENSE.txt": "/static/js/2.d7746dfd.chunk.js.LICENSE.txt",
+    "static/media/bg-about-us.cf9a123e.jpg": "/static/media/bg-about-us.cf9a123e.jpg",
+    "static/media/blog2.aba7a3cb.jpg": "/static/media/blog2.aba7a3cb.jpg",
+    "static/media/logo-coinbase.87e91c7f.svg": "/static/media/logo-coinbase.87e91c7f.svg",
+    "static/media/logo-nasa.c5d11f88.svg": "/static/media/logo-nasa.c5d11f88.svg",
+    "static/media/logo-netflix.432ed6b5.svg": "/static/media/logo-netflix.432ed6b5.svg",
+    "static/media/logo-pinterest.84470903.svg": "/static/media/logo-pinterest.84470903.svg",
+    "static/media/logo-spotify.7e255dc6.svg": "/static/media/logo-spotify.7e255dc6.svg",
+    "static/media/logo-vodafone.b3e8486c.svg": "/static/media/logo-vodafone.b3e8486c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.70426896.js",
-    "static/js/2.67a0e7ed.chunk.js",
+    "static/js/runtime-main.c01c9e6d.js",
+    "static/js/2.d7746dfd.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.5e79f34a.chunk.js"
+    "static/js/main.8ecdf8b5.chunk.js"
   ]
 }
