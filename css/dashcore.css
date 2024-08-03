@@ -10255,8 +10255,8 @@ fieldset:disabled .btn {
 }
 
 .py-5 {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+      padding-top: 10rem !important;
+      padding-bottom: 10rem !important;
 }
 
 .py-6 {
@@ -27698,8 +27698,10 @@ main {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+ opacity 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+ opacity 0.3s ease-in-out;
   text-decoration: none;
   letter-spacing: 1px;
   padding: 1rem;
@@ -30901,7 +30903,7 @@ section.shadow,
 }
 
 .integrations-header .container {
-  padding-bottom: 600px;
+  padding-bottom: 737px !important;
 }
 
 .integrations-header .background-shape-main {
@@ -30924,11 +30926,12 @@ section.shadow,
 .integrations-header .bubbles-wrap {
   z-index: 2;
   overflow: hidden;
-  height: 600px;
+  height: 687px;
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 0%;
+  right: 0%;
+  background: #f1f4f8;
 }
 
 .integrations-header .bubbles-container {

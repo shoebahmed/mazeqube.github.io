@@ -9,10 +9,10 @@
 "use strict";
 
 (function($, global, $scope) {
-  $scope.SCROLL_SPEED = 0.3;
+  $scope.SCROLL_SPEED = 1.0;
   $scope.NOISE_SPEED = 0.004;
   $scope.NOISE_AMOUNT = 5;
-  $scope.CANVAS_WIDTH = 2800;
+  $scope.CANVAS_WIDTH = 2690;
 
   $scope.bubbles = [
     { s: 0.6, x: 1134, y: 45 },
@@ -97,12 +97,12 @@
     var randomX = $scope.noise.simplex2(this.noiseSeedX, 0);
     var randomY = $scope.noise.simplex2(this.noiseSeedY, 0);
 
-    this.x -= $scope.SCROLL_SPEED;
-    this.xWithNoise = -this.x + randomX * $scope.NOISE_AMOUNT;
+    this.x += $scope.SCROLL_SPEED;
+    this.xWithNoise = this.x + randomX * $scope.NOISE_AMOUNT;
     this.yWithNoise = this.y + randomY * $scope.NOISE_AMOUNT;
 
-    if (this.x < -200) {
-      this.x = $scope.CANVAS_WIDTH;
+    if (this.xWithNoise > $scope.CANVAS_WIDTH + 200) {
+      this.x = -100;
     }
 
     this.el.style.transform =
