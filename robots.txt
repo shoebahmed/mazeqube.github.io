@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://new.mazeqube.com/sitemap.xml
