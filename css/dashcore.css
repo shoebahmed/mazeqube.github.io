@@ -32560,4 +32560,29 @@ section.shadow,
 .enquire{
     margin-left: 4%;
 }
+.logo {
+    max-width: 100%; /* Ensure logo doesn't exceed container width */
+    height: auto;
+}
+@media (max-width: 767px) {
+    .logo-sticky {
+        max-width: 80%;
+    }
+    .site-footer .row {
+        text-align: left;
+    }
+
+    .site-footer .col-md-4,
+    .site-footer .col-md-2 {
+        text-align: left;
+    }
+
+    .site-footer .nav {
+        text-align: left;
+    }
+
+    .site-footer .btn {
+        text-align: left;
+    }
+}
 /*# sourceMappingURL=dashcore.css.map */
