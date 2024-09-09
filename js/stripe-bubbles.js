@@ -83,9 +83,11 @@
     this.el = document.createElement("div");
     this.el.className = "bubble bubble-" + (this.index + 1);
 
-    // Add the link as a data attribute if it exists
     if (link) {
-      this.el.setAttribute("data-link", link);
+      const aTag = document.createElement("a");
+      aTag.setAttribute("href", link); // will displaylink for SEO purposes
+
+      this.el.appendChild(aTag); // Append the <a> tag inside the div
     }
 
     $scope.bubblesEl.appendChild(this.el);
