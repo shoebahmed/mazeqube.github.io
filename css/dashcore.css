@@ -32562,7 +32562,7 @@ section.shadow,
     margin-left: 4%;
 }
 .logo {
-    max-width: 100%; /* Ensure logo doesn't exceed container width */
+    /*max-width: 100%;*/ /* Ensure logo doesn't exceed container width */
     height: auto;
 }
 [id] {
