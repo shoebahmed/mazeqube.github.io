@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Loop through each <a> and replace ".html" with "" (remove extension)
       links.forEach(link => {
-        let href = link.getAttribute('href');
+        var href = link.getAttribute('href');
         // Replace 'index.html' with ''
         if (href.includes('index.html')) {
           href = href.replace('index.html', '');
