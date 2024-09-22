@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Replace 'index.html' with ''
         if (href.includes('index.html')) {
           href = href.replace('index.html', '');
+          // Update the link's href attribute
+          link.setAttribute('href', href);
         }
         link.href = link.href.replace('.html', '');
       });
