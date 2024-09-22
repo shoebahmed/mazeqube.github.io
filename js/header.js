@@ -10,14 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Loop through each <a> and replace ".html" with "" (remove extension)
       links.forEach(link => {
-        var href = link.getAttribute('href');
-        // Replace 'index.html' with ''
-        if (href.includes('index.html')) {
-          href = href.replace('index.html', '');
-          // Update the link's href attribute
-          link.setAttribute('href', href);
+        if(link.href.indexOf('index.html') > 1) {
+          link.href = link.href.replace('index.html', '');
+        } else {
+          link.href = link.href.replace('.html', '');
         }
-        link.href = link.href.replace('.html', '');
       });
     })
     .catch(error => console.error('Error loading the header:', error));
