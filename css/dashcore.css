@@ -27672,7 +27672,7 @@ main {
 
 .navigation .logo {
   max-height: 70px;
-  width: 86%;
+    width: 86%;
 }
 
 .navigation .dropdown-menu {
@@ -32562,6 +32562,7 @@ section.shadow,
     margin-left: 4%;
 }
 .logo {
+    max-width: 100%; /* Ensure logo doesn't exceed container width */
     height: auto;
 }
 [id] {
