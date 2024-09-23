@@ -1,12 +1,12 @@
 // JavaScript to load header.html into the page
 document.addEventListener("DOMContentLoaded", function() {
-  fetch('header.html')
+  fetch('footer.html')
     .then(response => response.text())
     .then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
+      document.getElementById('footer-placeholder').innerHTML = data;
 
       // Select all <a> elements in the newly loaded header
-      const links = document.querySelectorAll('#header-placeholder a');
+      const links = document.querySelectorAll('#footer-placeholder a');
 
 
       // Loop through each <a> and replace ".html" with "" (remove extension)
@@ -18,5 +18,5 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       });
     })
-    .catch(error => console.error('Error loading the header:', error));
+    .catch(error => console.error('Error loading the footer:', error));
 });
