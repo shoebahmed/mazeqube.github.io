@@ -1,6 +1,6 @@
-// JavaScript to load header.html into the page
-document.addEventListener("DOMContentLoaded", function() {
-
+// Shorthand for $( document ).ready()
+$(function() {
+    console.log( "ready!" );
     // Select all <a> elements in the newly loaded header
     const firstLinks = document.querySelectorAll('#header-placeholder a');
     processLinks(firstLinks);
