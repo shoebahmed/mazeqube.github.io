@@ -49,178 +49,180 @@
 </head>
 
 <body>
-    <!--[if lt IE 8]>
+<!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-    <!-- ./Making stripe menu navigation -->
+<!-- ./Making stripe menu navigation -->
+<nav class="st-nav navbar main-nav navigation fixed-top" id="main-nav">
     <div id="header-placeholder"></div>
-    <script src="js/header.js"></script>
-
-    <main class="overflow-hidden">
-        <!-- ./Page header -->
-        <header class="page header text-contrast bg-primary" style="">
-            <div class="container pb-9">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h1 class="display-md-6 font-md text-contrast mb-4">Partner with us</h1>
-                        <p class="lead text-contrast">At MazeQube, we specialize in developing sophisticated solutions on the AWS cloud platform and are eager to forge partnerships with IT companies that share our vision for innovation and growth. With over 8 years of experience in supporting applications, we bring a wealth of expertise to the table, including proficiency in integrating open-source technology, payment gateways, HubSpot, and configuring data pipelines.</p>
-                        <p class="lead text-contrast">Partnering with us means you can leverage our deep AWS knowledge to enhance your service offerings and drive mutual success. We believe that by combining our strengths, we can unlock new business opportunities, reach broader markets, and deliver outstanding value to our clients.</p>
-                        <p class="lead text-contrast">If you’re interested in exploring how a partnership with MazeQube could benefit both our businesses, we’d love to hear from you. Contact us to discuss how we can work together to achieve shared growth and innovation.</p>
-                    </div>
+</nav>
+<main class="overflow-hidden">
+    <!-- ./Page header -->
+    <header class="page header text-contrast bg-primary" style="">
+        <div class="container pb-9">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-md-6 font-md text-contrast mb-4">Partner with us</h1>
+                    <p class="lead text-contrast">At MazeQube, we specialize in developing sophisticated solutions on the AWS cloud platform and are eager to forge partnerships with IT companies that share our vision for innovation and growth. With over 8 years of experience in supporting applications, we bring a wealth of expertise to the table, including proficiency in integrating open-source technology, payment gateways, HubSpot, and configuring data pipelines.</p>
+                    <p class="lead text-contrast">Partnering with us means you can leverage our deep AWS knowledge to enhance your service offerings and drive mutual success. We believe that by combining our strengths, we can unlock new business opportunities, reach broader markets, and deliver outstanding value to our clients.</p>
+                    <p class="lead text-contrast">If you’re interested in exploring how a partnership with MazeQube could benefit both our businesses, we’d love to hear from you. Contact us to discuss how we can work together to achieve shared growth and innovation.</p>
                 </div>
             </div>
-        </header>
-        <div class="position-relative">
-            <div class="shape-divider shape-divider-bottom shape-divider-fluid-x text-contrast"><svg viewBox="0 0 2880 48" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z"></path>
-                </svg></div>
-        </div><!-- ./Contact Us -->
-        <section class="section mt-n7">
-            <div class="container bring-to-front pt-0">
-                <div class="row align-items-center g-4">
-                    <div class="col-md-7 col-lg-6">
-                        <div id="block-card" class="card rounded-4 shadow p-4">
-                            <div class="card-body">
-                                <form id="custom-form" class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up">
-                                    <div class="mb-4">
-                                        <label for="firstname" class="fw-bold mb-0">First Name</label>
-                                        <input type="text" name="firstname" placeholder="First Name" class="form-control" id="firstname" required>
-                                        <div class="invalid-feedback"></div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="lastname" class="fw-bold mb-0">Last Name</label>
-                                        <input type="text" name="lastname" placeholder="Last Name" class="form-control" id="lastname" required>
-                                        <div class="invalid-feedback"></div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="email" class="fw-bold mb-0">Email address</label>
-                                        <div id="emailHelp" class="small form-text text-muted mt-0 mb-2 fst-italic">We'll never share your email with anyone else.</div>
-                                        <input type="email" name="email" placeholder="Valid Email" class="form-control" id="email" required>
-                                        <div class="invalid-feedback"></div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="jobtitle" class="fw-bold mb-0">Job Title</label>
-                                        <input type="jobtitle" name="jobtitle" placeholder="Job Title" class="form-control" id="jobtitle" required>
-                                        <div class="invalid-feedback"></div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="name" class="fw-bold mb-0">Company Name</label>
-                                        <input type="name" name="name" placeholder="Company Name" class="form-control" id="name" required>
-                                        <div class="invalid-feedback"></div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="country" class="fw-bold mb-0">Country/Region</label>
-                                        <input type="text" name="country" placeholder="Country/Region" class="form-control" id="country" required>
-                                        <div class="invalid-feedback"></div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="fw-bold" for="message">Message</label>
-                                        <textarea name="message" placeholder="What do you want to let us know?" class="form-control" id="message" rows="3" required></textarea>
-                                        <div class="invalid-feedback"></div>
-                                    </div>
-                                    <div class="d-grid gap-2">
-                                        <button class="btn btn-primary shadow-primary" id="submitButton" type="submit" data-loading-text="Sending...">
-                                            <span class="spinner spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
-                                            <span class="text">Send Message</span>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="response-message">
-                            <i class="fas fa-envelope fa-2x"></i>
-                            <p class="fs-3 mb-3">Thank you for contacting us!!</p>
-                            <p class="fw-bold message">We have your message.</p>
+        </div>
+    </header>
+    <div class="position-relative">
+        <div class="shape-divider shape-divider-bottom shape-divider-fluid-x text-contrast"><svg viewBox="0 0 2880 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z"></path>
+        </svg></div>
+    </div><!-- ./Contact Us -->
+    <section class="section mt-n7">
+        <div class="container bring-to-front pt-0">
+            <div class="row align-items-center g-4">
+                <div class="col-md-7 col-lg-6">
+                    <div id="block-card" class="card rounded-4 shadow p-4">
+                        <div class="card-body">
+                            <form id="custom-form" class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up">
+                                <div class="mb-4">
+                                    <label for="firstname" class="fw-bold mb-0">First Name</label>
+                                    <input type="text" name="firstname" placeholder="First Name" class="form-control" id="firstname" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="lastname" class="fw-bold mb-0">Last Name</label>
+                                    <input type="text" name="lastname" placeholder="Last Name" class="form-control" id="lastname" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="fw-bold mb-0">Email address</label>
+                                    <div id="emailHelp" class="small form-text text-muted mt-0 mb-2 fst-italic">We'll never share your email with anyone else.</div>
+                                    <input type="email" name="email" placeholder="Valid Email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="jobtitle" class="fw-bold mb-0">Job Title</label>
+                                    <input type="jobtitle" name="jobtitle" placeholder="Job Title" class="form-control" id="jobtitle" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="name" class="fw-bold mb-0">Company Name</label>
+                                    <input type="name" name="name" placeholder="Company Name" class="form-control" id="name" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="country" class="fw-bold mb-0">Country/Region</label>
+                                    <input type="text" name="country" placeholder="Country/Region" class="form-control" id="country" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="fw-bold" for="message">Message</label>
+                                    <textarea name="message" placeholder="What do you want to let us know?" class="form-control" id="message" rows="3" required></textarea>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary shadow-primary" id="submitButton" type="submit" data-loading-text="Sending...">
+                                        <span class="spinner spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                        <span class="text">Send Message</span>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="col-md-5 ms-md-auto mt-6">
-                        <div class="d-flex align-items-center mt-md-5">
-                            <i class="fas fa-map-marker fa-2x text-primary me-3"></i>
-                            <div class="flex-filll"> UK, Flat 402, The Blenheim Centre <span class="d-block">Hounslow TW3 1ND</span><span class="d-block">United Kingdom</span>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="flex-filll"> B 504, Kumar Sublime <span class="d-block">Parge Nagar, Kondhwa</span><span class="d-block">Pune, Maharashtra - 411048</span>
-                            </div>
+                    <div class="response-message">
+                        <i class="fas fa-envelope fa-2x"></i>
+                        <p class="fs-3 mb-3">Thank you for contacting us!!</p>
+                        <p class="fw-bold message">We have your message.</p>
+                    </div>
+                </div>
+                <div class="col-md-5 ms-md-auto mt-6">
+                    <div class="d-flex align-items-center mt-md-5">
+                        <i class="fas fa-map-marker fa-2x text-primary me-3"></i>
+                        <div class="flex-filll"> UK, Flat 402, The Blenheim Centre <span class="d-block">Hounslow TW3 1ND</span><span class="d-block">United Kingdom</span>
                         </div>
-                        <div class="d-flex align-items-center my-4">
-                            <i class="fas fa-phone fa-2x text-primary me-3"></i>
-                            <div class="flex-fill">
+                        <div class="divider"></div>
+                        <div class="flex-filll"> B 504, Kumar Sublime <span class="d-block">Parge Nagar, Kondhwa</span><span class="d-block">Pune, Maharashtra - 411048</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center my-4">
+                        <i class="fas fa-phone fa-2x text-primary me-3"></i>
+                        <div class="flex-fill">
                                 <span class="d-block">
                                   <a href="tel:+44-74044-10680">+44 74044 10680</a>
                                 </span>
-                            </div>
                         </div>
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-envelope fa-2x text-primary me-3"></i>
-                            <div class="flex-fill">
-                                <a href="mailto:info@mazeqube.com">MazeQube.com</a>
-                            </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-envelope fa-2x text-primary me-3"></i>
+                        <div class="flex-fill">
+                            <a href="mailto:info@mazeqube.com">MazeQube.com</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- ./Other contact channels -->
-        <!--<section class="section b-b">
-            <div class="container">
-                <div class="row gap-y align-items-center text-center text-lg-start">
-                    <div class="col-12 col-md-6 py-4 px-5 b-md-r"><i data-feather="dollar-sign" width="36" height="36" class="stroke-darker"></i> <a href="javascript:;" class="mt-4 text-darker d-flex align-items-center">
-                            <h4 class="me-3">Contact Sales</h4><i class="fas fa-long-arrow-alt-right"></i>
-                        </a>
-                        <p class="mt-4">Looking for a custom quote? need to tell us more about your project? or want a demonstration? drop us a line to <a href="mailto:support@5studios.net">sales@5studios.net</a></p>
-                    </div>
-                    <div class="col-12 col-md-6 py-4 px-5"><i data-feather="life-buoy" width="36" height="36" class="stroke-darker"></i> <a href="javascript:;" class="mt-4 text-darker d-flex align-items-center">
-                            <h4 class="me-3">Technical Support</h4><i class="fas fa-long-arrow-alt-right"></i>
-                        </a>
-                        <p class="mt-4">Any question about how to integrate your product?. Don't fret, our geek team is ready for you at <a href="mailto:support@5studios.net">support@5studios.net</a></p>
-                    </div>
+        </div>
+    </section>
+    <!-- ./Other contact channels -->
+    <!--<section class="section b-b">
+        <div class="container">
+            <div class="row gap-y align-items-center text-center text-lg-start">
+                <div class="col-12 col-md-6 py-4 px-5 b-md-r"><i data-feather="dollar-sign" width="36" height="36" class="stroke-darker"></i> <a href="javascript:;" class="mt-4 text-darker d-flex align-items-center">
+                        <h4 class="me-3">Contact Sales</h4><i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
+                    <p class="mt-4">Looking for a custom quote? need to tell us more about your project? or want a demonstration? drop us a line to <a href="mailto:support@5studios.net">sales@5studios.net</a></p>
+                </div>
+                <div class="col-12 col-md-6 py-4 px-5"><i data-feather="life-buoy" width="36" height="36" class="stroke-darker"></i> <a href="javascript:;" class="mt-4 text-darker d-flex align-items-center">
+                        <h4 class="me-3">Technical Support</h4><i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
+                    <p class="mt-4">Any question about how to integrate your product?. Don't fret, our geek team is ready for you at <a href="mailto:support@5studios.net">support@5studios.net</a></p>
                 </div>
             </div>
-        </section>-->
-        <!-- ./Footer - Simple -->
-        <div id="footer-placeholder"></div>
-        <script src="js/footer.js"></script>
-    </main><!-- themeforest:js -->
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/card.js"></script>
-    <script src="js/counterup2.js"></script>
-    <script src="js/noise.js"></script>
-    <script src="js/noframework.waypoints.js"></script>
-    <script src="js/odometer.js"></script>
-    <script src="js/prism.js"></script>
-    <script src="js/simplebar.js"></script>
-    <script src="js/swiper-bundle.js"></script>
-    <script src="js/jquery.easing.js"></script>
-    <script src="js/jquery.validate.js"></script>
-    <script src="js/jquery.smartWizard.js"></script>
-    <script src="js/feather.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/cookieconsent.js"></script>
-    <script src="js/jquery.animatebar.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/forms.js"></script>
-    <script src="js/stripe-bubbles.js"></script>
-    <script src="js/stripe-menu.js"></script>
-    <script src="js/credit-card.js"></script>
-    <script src="js/pricing.js"></script>
-    <script src="js/shop.js"></script>
-    <script src="js/svg.js"></script>
-    <script src="js/site.js"></script>
-    <script src="js/wizards.js"></script>
-    <script src="js/cookie-consent-util.js"></script>
-    <script src="js/cookie-consent-themes.js"></script>
-    <script src="js/cookie-consent-custom-css.js"></script>
-    <script src="js/cookie-consent-informational.js"></script>
-    <script src="js/cookie-consent-opt-out.js"></script>
-    <script src="js/cookie-consent-opt-in.js"></script>
-    <script src="js/cookie-consent-location.js"></script>
-    <script src="js/demo.js"></script>
-    <!-- endinject -->
+        </div>
+    </section>-->
+    <!-- ./Footer - Simple -->
+    <div id="footer-placeholder"></div>
+    <script src="js/footer.js"></script>
+</main><!-- themeforest:js -->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/card.js"></script>
+<script src="js/counterup2.js"></script>
+<script src="js/noise.js"></script>
+<script src="js/noframework.waypoints.js"></script>
+<script src="js/odometer.js"></script>
+<script src="js/prism.js"></script>
+<script src="js/simplebar.js"></script>
+<script src="js/swiper-bundle.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.smartWizard.js"></script>
+<script src="js/feather.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/typed.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+<script src="js/cookieconsent.js"></script>
+<script src="js/jquery.animatebar.js"></script>
+<script src="js/common.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/stripe-bubbles.js"></script>
+<script src="js/stripe-menu.js"></script>
+<script src="js/credit-card.js"></script>
+<script src="js/pricing.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/svg.js"></script>
+<script src="js/site.js"></script>
+<script src="js/wizards.js"></script>
+<script src="js/cookie-consent-util.js"></script>
+<script src="js/cookie-consent-themes.js"></script>
+<script src="js/cookie-consent-custom-css.js"></script>
+<script src="js/cookie-consent-informational.js"></script>
+<script src="js/cookie-consent-opt-out.js"></script>
+<script src="js/cookie-consent-opt-in.js"></script>
+<script src="js/cookie-consent-location.js"></script>
+<script src="js/demo.js"></script>
+<script src="js/header.js"></script>
+
+<!-- endinject -->
 </body>
 
 </html>

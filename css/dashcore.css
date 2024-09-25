@@ -32607,6 +32607,9 @@ section.shadow,
     }
 
 @media (max-width: 767px) {
+    .sticky-toc{
+        display: none !important;
+    }
     .logo-sticky {
         max-width: 80%;
     }
