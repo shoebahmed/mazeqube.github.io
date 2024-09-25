@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(link.href.indexOf('index.html') > 1) {
           link.href = link.href.replace('index.html', '');
         } else {
-          link.href = link.href.replace('.html', '.html');
+          link.href = link.href.replace('.html', '');
         }
       });
     })
