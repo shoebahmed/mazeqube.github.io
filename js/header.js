@@ -5,9 +5,13 @@ $(function() {
     // Select all <a> elements in the newly loaded header
     const firstLinks = $('#header-placeholder a');
     const secondLinks = $('#header-industries a');
+    const firstLinksMobile = $('#header-placeholder-mobile a');
+    const secondLinksMobile = $('#header-industries-mobile a');
 
     processLinks(firstLinks);
     processLinks(secondLinks);
+    processLinks(firstLinksMobile);
+    processLinks(secondLinksMobile);
 
     // Navbar toggler click event. (mobile view menu button)
     $('.navbar-toggler').on('click', function() {
