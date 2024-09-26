@@ -31,6 +31,10 @@ function processLinks(links) {
     // Loop through each <a> and replace ".html" with "" (remove extension)
     links.each(function() {
         let href = $(this).attr('href');
+        if (typeof href === 'undefined') {
+         return;
+        }
+        console.log(href);
         if (href.indexOf('index.html') > 1) {
             href = href.replace('index.html', '');
         } else {
