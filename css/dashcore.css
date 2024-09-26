@@ -27671,7 +27671,7 @@ main {
 }
 
 .navigation .logo {
-  max-height: 70px;
+  max-height: 62px;
 }
 
 .navigation .dropdown-menu {
@@ -32606,6 +32606,9 @@ section.shadow,
     }
 
 @media (max-width: 767px) {
+    .home {
+        font-size: 2.5rem !important;
+    }
     .sticky-toc {
         display: none !important;
     }
