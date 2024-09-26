@@ -27672,7 +27672,6 @@ main {
 
 .navigation .logo {
   max-height: 70px;
-    width: 86%;
 }
 
 .navigation .dropdown-menu {
@@ -32607,37 +32606,27 @@ section.shadow,
     }
 
 @media (max-width: 767px) {
-    .sticky-toc{
+    .sticky-toc {
         display: none !important;
     }
-    .logo-sticky {
-        max-width: 80%;
-    }
-    .site-footer .row {
-        text-align: left;
-    }
 
+    .site-footer .row,
     .site-footer .col-md-4,
-    .site-footer .col-md-2 {
-        text-align: left;
-    }
-
-    .site-footer .nav {
-        text-align: left;
-    }
-
+    .site-footer .col-md-2,
+    .site-footer .nav,
     .site-footer .btn {
         text-align: left;
     }
-    .enquire{
+
+    .enquire {
         margin-left: 7%;
         margin-top: -3%;
     }
 }
 
 .divider {
-            height: 100px;
-            border-left: 1px solid #c1c1c1;
-            margin: 0 1rem;
+    height: 100px;
+    border-left: 1px solid #c1c1c1;
+    margin: 0 1rem;
 }
 /*# sourceMappingURL=dashcore.css.map */

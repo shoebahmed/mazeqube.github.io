@@ -1,20 +1,37 @@
 // Shorthand for $( document ).ready()
 $(function() {
-    console.log( "ready!" );
+    console.log("ready!");
+
     // Select all <a> elements in the newly loaded header
-    const firstLinks = document.querySelectorAll('#header-placeholder a');
+    const firstLinks = $('#header-placeholder a');
+    const secondLinks = $('#header-industries a');
+
     processLinks(firstLinks);
-    const secondLinks = document.querySelectorAll('#header-industries a');
     processLinks(secondLinks);
+
+    // Navbar toggler click event. (mobile view menu button)
+    $('.navbar-toggler').on('click', function() {
+        const isExpanded = $(this).attr('aria-expanded') === 'true';
+
+        $(this).attr('aria-expanded', !isExpanded);
+
+        //  menu visibility toggle kiye
+        $('.st-popup').css('display', !isExpanded ? 'block' : 'none');
+
+        // prvent scroll when menu open
+        $('body').toggleClass('menu-open', !isExpanded);
+    });
 });
 
 function processLinks(links) {
-  // Loop through each <a> and replace ".html" with "" (remove extension)
-  links.forEach(link => {
-    if(link.href.indexOf('index.html') > 1) {
-      link.href = link.href.replace('index.html', '');
-    } else {
-      link.href = link.href.replace('.html', '');
-    }
-  });
+    // Loop through each <a> and replace ".html" with "" (remove extension)
+    links.each(function() {
+        let href = $(this).attr('href');
+        if (href.indexOf('index.html') > 1) {
+            href = href.replace('index.html', '');
+        } else {
+            href = href.replace('.html', '');
+        }
+        $(this).attr('href', href);
+    });
 }
