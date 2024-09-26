@@ -32606,9 +32606,14 @@ section.shadow,
     }
 
 @media (max-width: 767px) {
-    .home {
+    .home{
         font-size: 2.5rem !important;
     }
+    .home-2 {
+        position: relative;
+        animation: none;
+    }
+
     .sticky-toc {
         display: none !important;
     }
