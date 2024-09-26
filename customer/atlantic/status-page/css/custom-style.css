@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+}
+
+.width-80{
+	margin: auto;
+	width: 80rem;
+}
+
+.mt{
+	margin-top: 8rem;
+}
+
+.p2{
+	padding: 2%;
+}
+
+.m2{
+	margin: 2rem;
+}
+
+.bulb{
+	width: 10rem;
+	height: 14rem;
+}
