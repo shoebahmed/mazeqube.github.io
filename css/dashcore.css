@@ -32604,6 +32604,9 @@ section.shadow,
         right: 2%;
         transform: translateY(-50%);
     }
+    .third-logo {
+        display: none !important;
+    }
 
 @media (max-width: 767px) {
     .home{
@@ -32625,11 +32628,40 @@ section.shadow,
     .site-footer .btn {
         text-align: left;
     }
-
     .enquire {
         margin-left: 7%;
         margin-top: -3%;
     }
+    .mobile-view{
+        text-align: center;
+        margin-left: -33% !important;
+    }
+
+    .navbar-sticky .second-logo {
+        display: none !important;
+    }
+
+    /* Show the third logo when the navbar becomes sticky */
+    .navbar-sticky .third-logo {
+        margin-left: 3%;
+        display: inline !important;
+        width: 150px;
+    }
+
+    /* Always hide the second logo on mobile */
+    .second-logo {
+        display: none !important;
+    }
+
+    /* Always show the third logo in mobile */
+    .third-logo {
+        margin-left: 3%;
+        display: inline !important;
+        width: 150px;
+    }
+    .row.gap-y .col-md-6 > .image-background {
+            background-image: none !important;
+        }
 }
 
 .divider {
