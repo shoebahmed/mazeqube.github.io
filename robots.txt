@@ -1,3 +1,6 @@
 User-agent: *
-Disallow:
+Disallow: /industries-first.html
+Disallow: /industries-second.html
+Disallow: /industries-third.html
+Disallow: /industries-four.html
 Sitemap: https://mazeqube.com/sitemap.xml
