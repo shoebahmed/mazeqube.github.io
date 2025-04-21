@@ -11179,14 +11179,14 @@ fieldset:disabled a {
 
 .btn-danger {
   color: #212529;
-  background: linear-gradient(to right, #7e57c2, #512da8);
+  background: linear-gradient(to right, #234A96, #97B2E7);
   /* background-color: #fe7c96;
   border-color: #fe7c96; */
 }
 
 .btn-danger:hover {
   color: #fff;
-  background: linear-gradient(to right, #7e57c2, #512da8);
+  background: linear-gradient(to right, #234A96, #97B2E7);
  /*  background-color: #fe5678;
   border-color: #fe496d; */
 }
@@ -11197,7 +11197,7 @@ fieldset:disabled a {
 
 .btn-danger.disabled, .btn-danger:disabled {
   color: #212529;
-  background: linear-gradient(to right, #7e57c2, #512da8);
+  background: linear-gradient(to right, #234A96, #97B2E7);
   /* background-color: #fe7c96;
   border-color: #fe7c96; */
 }
@@ -11205,7 +11205,7 @@ fieldset:disabled a {
 .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active,
 .show > .btn-danger.dropdown-toggle {
   color: #fff;
-  background: linear-gradient(to right, #7e57c2, #512da8);
+  background: linear-gradient(to right, #234A96, #97B2E7);
   /* background-color: #fe496d;
   border-color: #fe3d63; */
 }
@@ -21945,7 +21945,7 @@ code {
 }
 
 .btn-danger:not(.btn-light):focus, .btn-danger:not(.btn-light):active {
-  background: linear-gradient(to right, #7e57c2, #512da8);
+  background: linear-gradient(to right, #234A96, #97B2E7);
  /*  background: #fe7c96;
   border-color: #fe7c96; */
 }
@@ -22051,13 +22051,13 @@ code {
 }
 
 .btn-outline-dark:hover, .btn-outline-dark:focus, .btn-outline-dark:active {
-  background: linear-gradient(to right, #7e57c2, #512da8);
+  background: linear-gradient(to right, #234A96, #97B2E7);
   color: #ffffff;
 }
 
 /* gradient buttons */
 .btn-gradient-primary {
-  background: linear-gradient(to right, #7e57c2, #512da8);
+  background: linear-gradient(to right, #234A96, #97B2E7);
   border: 0;
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
@@ -22068,7 +22068,7 @@ code {
 
 .btn-gradient-primary:not([disabled]):not(.disabled):active, .btn-gradient-primary:not([disabled]):not(.disabled).active,
 .show > .btn-gradient-primary.dropdown-toggle {
-  background: linear-gradient(to right, #7e57c2, #512da8);
+  background: linear-gradient(to right, #234A96, #97B2E7);
 }
 
 .btn-gradient-primary:hover {
@@ -25121,7 +25121,7 @@ dl li {
 }
 
 .nav-pills-info .nav-link.active {
-  background: linear-gradient(to right, #7e57c2, #512da8);
+  background: linear-gradient(to right, #234A96, #97B2E7);
 }
 
 .nav-pills-warning .nav-link {
@@ -29548,7 +29548,7 @@ div.tagsinput span.tag a {
     font-family: "ubuntu-medium", sans-serif;
     font-size: 1rem;
     border-radius: 0px 5px 5px 0px;
-    background: linear-gradient(to right, #7e57c2, #512da8);
+    background: linear-gradient(to right, #234A96, #97B2E7);
     padding: 10px;
     width: 188px;
     height: 40px;
