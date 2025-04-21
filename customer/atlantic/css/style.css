@@ -11145,14 +11145,14 @@ fieldset:disabled a {
 
 .btn-warning {
   color: #212529;
-  background-color: #9575cd;
-  border-color: #9575cd;
+  background-color: #234A96;
+  border-color: #234A96;
 }
 
 .btn-warning:hover {
   color: #212529;
-  background-color: #9575cd;
-  border-color: #9575cd;
+  background-color: #234A96;
+  border-color: #234A96;
 }
 
 .btn-warning:focus, .btn-warning.focus {
@@ -11161,15 +11161,15 @@ fieldset:disabled a {
 
 .btn-warning.disabled, .btn-warning:disabled {
   color: #212529;
-  background-color: #9575cd;
-  border-color: #9575cd;
+  background-color: #234A96;
+  border-color: #234A96;
 }
 
 .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active,
 .show > .btn-warning.dropdown-toggle {
   color: #212529;
-  background-color: #9575cd;
-  border-color: #9575cd;
+  background-color: #234A96;
+  border-color: #234A96;
 }
 
 .btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning:not(:disabled):not(.disabled).active:focus,
@@ -15225,7 +15225,7 @@ button.close {
 }
 
 .bg-primary, .settings-panel .color-tiles .tiles.primary {
-  background-color: #9575cd !important;
+  background-color: #234A96 !important;
 }
 
 a.bg-primary:hover, .settings-panel .color-tiles a.tiles.primary:hover, a.bg-primary:focus, .settings-panel .color-tiles a.tiles.primary:focus,
@@ -21895,8 +21895,8 @@ code {
 }
 
 .btn-warning:not(.btn-light):focus, .btn-warning:not(.btn-light):active {
-  background: #9575cd;
-  border-color: #9575cd;
+  background: #234A96;
+  border-color: #234A96;
 }
 
 .btn-outline-warning:hover, .btn-outline-warning:focus, .btn-outline-warning:active {
