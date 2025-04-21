@@ -11031,7 +11031,7 @@ fieldset:disabled a {
 .show > .btn-primary.dropdown-toggle, .wizard > .actions
 .show > a.dropdown-toggle {
   color: #fff;
-  background-color: #5e35b1;
+  background-color: #234A96;
   border-color: #962dff;
 }
 
@@ -17842,11 +17842,11 @@ button.bg-dark:focus,
 }
 
 .text-primary, .list-wrapper .completed .remove {
-  color: #5e35b1 !important;
+  color: #234A96 !important;
 }
 
 a.text-primary:hover, .list-wrapper .completed a.remove:hover, a.text-primary:focus, .list-wrapper .completed a.remove:focus {
-  color: #5e35b1 !important;
+  color: #234A96 !important;
 }
 
 .text-secondary, .list-wrapper .remove {
@@ -22887,7 +22887,7 @@ code {
   width: 18px;
   height: 18px;
   border-radius: 2px;
-  border: solid #5e35b1;
+  border: solid #234A96;
   border-width: 2px;
   -webkit-transition: all;
   -moz-transition: all;
