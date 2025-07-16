@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
           link.href = link.href.replace('.html', '');
         }
       });
+
+      const copyrightSpan = document.querySelector('#footer-placeholder #copyright');
+        if (copyrightSpan) {
+          copyrightSpan.textContent = new Date().getFullYear();
+        }
     })
     .catch(error => console.error('Error loading the footer:', error));
 });
