@@ -53,320 +53,10 @@
     <link rel="stylesheet" href="css/dashcore.css">
     <link rel="stylesheet" href="css/rtl.css">
     <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/home.css">
 
     <!-- Enquiry Modal Styles -->
-    <style>
-        /* Modal styles - High specificity to override existing styles */
-        .enquiry-modal-overlay {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            background-color: rgba(0, 0, 0, 0.8) !important;
-            display: flex !important;
-            justify-content: center !important;
-            align-items: flex-start !important; /* Changed from center to flex-start */
-            z-index: 99999 !important;
-            opacity: 0 !important;
-            visibility: hidden !important;
-            transition: all 0.3s ease !important;
-            padding: 20px !important; /* Added padding */
-            box-sizing: border-box !important;
-            overflow-y: auto !important; /* Enable overlay scrolling */
-        }
 
-        .enquiry-modal-overlay.active {
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-
-        .enquiry-modal {
-            background: white !important;
-            width: 100% !important;
-            max-width: 500px !important;
-            max-height: 85vh !important; /* Limit height */
-            border-radius: 10px !important;
-            padding: 2rem !important;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
-            transform: translateY(-50px) !important;
-            transition: transform 0.4s ease !important;
-            position: relative !important;
-            z-index: 100000 !important;
-            overflow-y: auto !important; /* Enable modal scrolling */
-            box-sizing: border-box !important;
-            margin-top: 60px !important; /* Space from top for header */
-            margin-bottom: 20px !important; /* Space from bottom */
-        }
-
-        .enquiry-modal-overlay.active .enquiry-modal {
-            transform: translateY(0) !important;
-        }
-
-        .enquiry-modal-header {
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            margin-bottom: 1.5rem !important;
-            border-bottom: 1px solid #eee !important;
-            padding-bottom: 1rem !important;
-            position: sticky !important; /* Make header sticky */
-            top: 0 !important;
-            background: white !important; /* Ensure background */
-            z-index: 1 !important;
-            padding-top: 0 !important;
-            height: 80px;
-        }
-
-        .enquiry-modal-header h2 {
-            color: #2c3e50 !important;
-            font-size: 1.8rem !important;
-            margin: 0 !important;
-            font-weight: 700 !important;
-        }
-
-        /* Rest of your existing modal CSS remains the same */
-        .enquiry-close-btn {
-            background: none !important;
-            border: none !important;
-            font-size: 1.8rem !important;
-            cursor: pointer !important;
-            color: #7f8c8d !important;
-            transition: color 0.3s !important;
-            line-height: 1 !important;
-            padding: 0 !important;
-            width: 30px !important;
-            height: 30px !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
-
-        .enquiry-close-btn:hover {
-            color: #e74c3c !important;
-        }
-
-        .enquiry-form-group {
-            margin-bottom: 1.5rem !important;
-        }
-
-        .enquiry-form-group label {
-            display: block !important;
-            margin-bottom: 0.5rem !important;
-            font-weight: 500 !important;
-            color: #2c3e50 !important;
-        }
-
-        .enquiry-form-control {
-            width: 100% !important;
-            padding: 12px 15px !important;
-            border: 1px solid #ddd !important;
-            border-radius: 5px !important;
-            font-size: 1rem !important;
-            transition: border-color 0.3s !important;
-            box-sizing: border-box !important;
-        }
-
-        .enquiry-form-control:focus {
-            border-color: #3498db !important;
-            outline: none !important;
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
-        }
-
-        textarea.enquiry-form-control {
-            min-height: 120px !important;
-            resize: vertical !important;
-            font-family: inherit !important;
-        }
-
-        .enquiry-submit-btn {
-            width: 100% !important;
-            background-color: #2ecc71 !important;
-            color: white !important;
-            padding: 12px !important;
-            border: none !important;
-            border-radius: 5px !important;
-            font-size: 1rem !important;
-            font-weight: 600 !important;
-            cursor: pointer !important;
-            transition: background-color 0.3s !important;
-        }
-
-        .enquiry-submit-btn:hover {
-            background-color: #27ae60 !important;
-        }
-
-        .enquiry-required {
-            color: #e74c3c !important;
-        }
-
-        /* Prevent body scroll when modal is open */
-        body.modal-open {
-            overflow: hidden !important;
-        }
-    </style>
-    <style>
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        video {
-            width: 100%;
-            display: block;
-        }
-
-        .custom-controls {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.3);
-            opacity: 1;
-            transition: opacity 0.3s;
-        }
-
-        .play-btn {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            margin-bottom: 30px;
-        }
-
-        .play-btn:hover {
-            transform: scale(1.1);
-            background: white;
-        }
-
-        .play-btn i {
-            font-size: 30px;
-            color: #333;
-            margin-left: 5px;
-        }
-
-        .video-container.playing .custom-controls {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .controls-bar {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .video-container:hover .controls-bar {
-            opacity: 1;
-        }
-
-        .progress-container {
-            flex-grow: 1;
-            height: 8px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
-            margin: 0 15px;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background: #ff4757;
-            border-radius: 4px;
-            width: 0%;
-            transition: width 0.1s;
-        }
-
-        .time-display {
-            color: white;
-            font-size: 14px;
-            min-width: 100px;
-            text-align: center;
-        }
-
-        .control-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
-
-        .control-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .volume-control {
-            display: flex;
-            align-items: center;
-            margin-left: 15px;
-        }
-
-        .volume-slider {
-            width: 80px;
-            margin-left: 8px;
-        }
-
-        .fullscreen-btn {
-            margin-left: 15px;
-        }
-
-        @media (max-width: 600px) {
-            .controls-bar {
-                flex-wrap: wrap;
-                padding: 10px;
-            }
-
-            .progress-container {
-                order: 1;
-                width: 100%;
-                margin: 10px 0;
-            }
-
-            .time-display {
-                order: 2;
-                margin-right: auto;
-            }
-
-            .volume-control {
-                order: 3;
-                margin-left: 0;
-            }
-
-            .fullscreen-btn {
-                order: 4;
-                margin-left: auto;
-            }
-        }
-    </style>
     <!-- endinject -->
 </head>
 <body>
@@ -644,75 +334,94 @@
             </div>
         </div>
     </section><!-- ./Features - hover animated -->
-    <section class="section bg-light bg-light-gradient edge bottom-right p-1">
+    <section class="section bg-light bg-light-gradient edge bottom-right">
         <div class="container bring-to-front">
             <div class="section-heading text-center">
                 <h5 class="text-primary bold small text-uppercase">Let's do business</h5>
                 <h2 class="bold">What we offer</h2>
             </div>
-            <div class="row gap-y">
-                <div class="col-md-6 row ">
-                    <div class="col-1 rounded  shadow-box p-4" style="background-color: #413790;)"></div>
-                    <div class="col-10 rounded bg-contrast shadow-box image-background off-left-background  p-4">
-                        <h3 class="">Custom Software Development</h3>
-                        <p class="text-secondary mb-0 ">Tailor-made software and platforms designed around your business model and workflows.</p>
-                        <br>
-                        <ul>
-                            <li>Web & mobile applications</li>
-                            <li>Enterprise platforms and portals</li>
-                            <li>API-first systems</li>
-                            <li>Cloud-native development</li>
-                            <li>High-scale transactional systems</li>
-                            <li>Data-intensive applications</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 row">
-                    <div class="col-1 rounded  shadow-box p-4" style="background-color: #ea7f23;)"></div>
-                    <div class="col-10 rounded bg-contrast shadow-box image-background off-left-background  p-4">
-                        <h3 class="">Business Process Automation</h3>
-                        <p class="text-secondary mb-0 ">Streamlining operations by eliminating manual tasks and accelerating throughput.</p>
-                        <br>
-                        <ul>
-                            <li>Web & mobile applications</li>
-                            <li>Enterprise platforms and portals</li>
-                            <li>API-first systems</li>
-                            <li>Cloud-native development</li>
-                            <li>High-scale transactional systems</li>
-                            <li>Data-intensive applications</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 row">
-                    <div class="col-1 rounded  shadow-box p-4" style="background-color: #0fa2ce;)"></div>
-                    <div class="col-10 rounded bg-contrast shadow-box image-background off-left-background  p-4">
-                        <h3 class="">AI Solutions & Integrations</h3>
-                        <p class="text-secondary mb-0 ">Practical AI that improves decision-making, efficiency and customer experience.</p>
-                        <br>
-                        <ul>
-                            <li>Intelligent data extraction</li>
-                            <li>Predictive decision layers</li>
-                            <li>AI-assisted workflows</li>
-                            <li>Recommendation engines</li>
-                            <li>NLP & document understanding</li>
-                            <li>AI integration into existing software</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 row">
-                    <div class="col-1 rounded  shadow-box p-4" style="background-color: #db2c28;)"></div>
-                    <div class="col-10 rounded bg-contrast shadow-box image-background off-left-background  p-4">
-                        <h3 class="">Platform Engineering</h3>
-                        <p class="text-secondary mb-0 ">End-to-end development and maintenance of enterprise-grade platforms.</p>
-                        <br>
-                        <ul>
-                            <li>Digital gifting & prepaid card ecosystem</li>
-                            <li>Inventory, WMS & OMS platform</li>
-                            <li>Prepaid, fintech & core extensions</li>
-                            <li>Community, membership & chamber platform</li>
-                            <li>Marine operations and managements</li>
-                            <li>Heavy equipment operations</li>
-                        </ul>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <!-- Service 1 -->
+                        <div class="col-md-6">
+                            <div class="service-card service-1">
+                                <div class="color-indicator"></div>
+                                <div class="card-content">
+                                    <h3>Custom Software Development</h3>
+                                    <p class="text-secondary mb-0">Tailor-made software and platforms designed around your business model and workflows.</p>
+                                    <br>
+                                    <ul>
+                                        <li>Web & mobile applications</li>
+                                        <li>Enterprise platforms and portals</li>
+                                        <li>API-first systems</li>
+                                        <li>Cloud-native development</li>
+                                        <li>High-scale transactional systems</li>
+                                        <li>Data-intensive applications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 2 -->
+                        <div class="col-md-6">
+                            <div class="service-card service-2">
+                                <div class="color-indicator"></div>
+                                <div class="card-content">
+                                    <h3>Business Process Automation</h3>
+                                    <p class="text-secondary mb-0">Streamlining operations by eliminating manual tasks and accelerating throughput.</p>
+                                    <br>
+                                    <ul>
+                                        <li>Workflow automation systems</li>
+                                        <li>Robotic Process Automation (RPA)</li>
+                                        <li>Document processing automation</li>
+                                        <li>Integration with legacy systems</li>
+                                        <li>Automated reporting & analytics</li>
+                                        <li>Process optimization consulting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div class="col-md-6">
+                            <div class="service-card service-3">
+                                <div class="color-indicator"></div>
+                                <div class="card-content">
+                                    <h3>AI Solutions & Integrations</h3>
+                                    <p class="text-secondary mb-0">Practical AI that improves decision-making, efficiency and customer experience.</p>
+                                    <br>
+                                    <ul>
+                                        <li>Intelligent data extraction</li>
+                                        <li>Predictive decision layers</li>
+                                        <li>AI-assisted workflows</li>
+                                        <li>Recommendation engines</li>
+                                        <li>NLP & document understanding</li>
+                                        <li>AI integration into existing software</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 4 -->
+                        <div class="col-md-6">
+                            <div class="service-card service-4">
+                                <div class="color-indicator"></div>
+                                <div class="card-content">
+                                    <h3>Platform Engineering</h3>
+                                    <p class="text-secondary mb-0">End-to-end development and maintenance of enterprise-grade platforms.</p>
+                                    <br>
+                                    <ul>
+                                        <li>Digital gifting & prepaid card ecosystem</li>
+                                        <li>Inventory, WMS & OMS platform</li>
+                                        <li>Prepaid, fintech & core extensions</li>
+                                        <li>Community, membership & chamber platform</li>
+                                        <li>Marine operations and managements</li>
+                                        <li>Heavy equipment operations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -881,30 +590,14 @@
                                 <div class="invalid-feedback"></div>
                             </div>
                             <div class="mb-4">
-                                <label for="lastname" class="fw-bold mb-0">Last Name</label>
-                                <input type="text" name="lastname" placeholder="Last Name" class="form-control" id="lastname" required="">
-                                <div class="invalid-feedback"></div>
-                            </div>
-                            <div class="mb-4">
                                 <label for="email" class="fw-bold mb-0">Email address</label>
                                 <div id="emailHelp" class="small form-text text-muted mt-0 mb-2 fst-italic">We'll never share your email with anyone else.</div>
                                 <input type="email" name="email" placeholder="Valid Email" class="form-control" id="email" required="">
                                 <div class="invalid-feedback"></div>
                             </div>
                             <div class="mb-4">
-                                <label for="jobtitle" class="fw-bold mb-0">Job Title</label>
-                                <input type="jobtitle" name="jobtitle" placeholder="Job Title" class="form-control" id="jobtitle" required="">
-                                <div class="invalid-feedback"></div>
-                            </div>
-                            <div class="mb-4">
                                 <label for="name" class="fw-bold mb-0">Company Name</label>
                                 <input type="name" name="name" placeholder="Company Name" class="form-control" id="name" required="">
-                                <div class="invalid-feedback"></div>
-                            </div>
-                            <div class="mb-4">
-                                <label for="country" class="fw-bold mb-0">Country/Region</label>
-                                <input list="country-list" type="text" name="country" placeholder="Country/Region" class="form-control" id="country" required="">
-                                <datalist id="country-list"></datalist>
                                 <div class="invalid-feedback"></div>
                             </div>
                             <div class="mb-3">
@@ -1017,7 +710,6 @@
             // Basic form validation
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const service = document.getElementById('service').value;
             const message = document.getElementById('message').value;
 
             if (!name || !email || !service || !message) {
@@ -1031,7 +723,6 @@
                 email,
                 phone: document.getElementById('phone').value,
                 company: document.getElementById('company').value,
-                service,
                 message
             });
 
@@ -1050,7 +741,7 @@
             const documentHeight = document.documentElement.scrollHeight;
 
             // Show modal when user has scrolled 60% of the page
-            if (scrollPosition > (documentHeight - windowHeight) * 0.6) {
+            if (scrollPosition > (documentHeight - windowHeight) * 0.85) {
                 openModal();
                 sessionStorage.setItem('mazequbeModalShown', 'true');
                 modalShown = true;
