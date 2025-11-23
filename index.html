@@ -53,6 +53,158 @@
     <link rel="stylesheet" href="css/dashcore.css">
     <link rel="stylesheet" href="css/rtl.css">
     <link rel="stylesheet" href="css/demo.css">
+
+    <!-- Enquiry Modal Styles -->
+    <style>
+        /* Modal styles - High specificity to override existing styles */
+        .enquiry-modal-overlay {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-color: rgba(0, 0, 0, 0.8) !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: flex-start !important; /* Changed from center to flex-start */
+            z-index: 99999 !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transition: all 0.3s ease !important;
+            padding: 20px !important; /* Added padding */
+            box-sizing: border-box !important;
+            overflow-y: auto !important; /* Enable overlay scrolling */
+        }
+
+        .enquiry-modal-overlay.active {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        .enquiry-modal {
+            background: white !important;
+            width: 100% !important;
+            max-width: 500px !important;
+            max-height: 85vh !important; /* Limit height */
+            border-radius: 10px !important;
+            padding: 2rem !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+            transform: translateY(-50px) !important;
+            transition: transform 0.4s ease !important;
+            position: relative !important;
+            z-index: 100000 !important;
+            overflow-y: auto !important; /* Enable modal scrolling */
+            box-sizing: border-box !important;
+            margin-top: 60px !important; /* Space from top for header */
+            margin-bottom: 20px !important; /* Space from bottom */
+        }
+
+        .enquiry-modal-overlay.active .enquiry-modal {
+            transform: translateY(0) !important;
+        }
+
+        .enquiry-modal-header {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            margin-bottom: 1.5rem !important;
+            border-bottom: 1px solid #eee !important;
+            padding-bottom: 1rem !important;
+            position: sticky !important; /* Make header sticky */
+            top: 0 !important;
+            background: white !important; /* Ensure background */
+            z-index: 1 !important;
+            padding-top: 0 !important;
+            height: 80px;
+        }
+
+        .enquiry-modal-header h2 {
+            color: #2c3e50 !important;
+            font-size: 1.8rem !important;
+            margin: 0 !important;
+            font-weight: 700 !important;
+        }
+
+        /* Rest of your existing modal CSS remains the same */
+        .enquiry-close-btn {
+            background: none !important;
+            border: none !important;
+            font-size: 1.8rem !important;
+            cursor: pointer !important;
+            color: #7f8c8d !important;
+            transition: color 0.3s !important;
+            line-height: 1 !important;
+            padding: 0 !important;
+            width: 30px !important;
+            height: 30px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .enquiry-close-btn:hover {
+            color: #e74c3c !important;
+        }
+
+        .enquiry-form-group {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .enquiry-form-group label {
+            display: block !important;
+            margin-bottom: 0.5rem !important;
+            font-weight: 500 !important;
+            color: #2c3e50 !important;
+        }
+
+        .enquiry-form-control {
+            width: 100% !important;
+            padding: 12px 15px !important;
+            border: 1px solid #ddd !important;
+            border-radius: 5px !important;
+            font-size: 1rem !important;
+            transition: border-color 0.3s !important;
+            box-sizing: border-box !important;
+        }
+
+        .enquiry-form-control:focus {
+            border-color: #3498db !important;
+            outline: none !important;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
+        }
+
+        textarea.enquiry-form-control {
+            min-height: 120px !important;
+            resize: vertical !important;
+            font-family: inherit !important;
+        }
+
+        .enquiry-submit-btn {
+            width: 100% !important;
+            background-color: #2ecc71 !important;
+            color: white !important;
+            padding: 12px !important;
+            border: none !important;
+            border-radius: 5px !important;
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+            transition: background-color 0.3s !important;
+        }
+
+        .enquiry-submit-btn:hover {
+            background-color: #27ae60 !important;
+        }
+
+        .enquiry-required {
+            color: #e74c3c !important;
+        }
+
+        /* Prevent body scroll when modal is open */
+        body.modal-open {
+            overflow: hidden !important;
+        }
+    </style>
     <!-- endinject -->
 </head>
 <body>
@@ -60,436 +212,625 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLKWJGXH"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <!--[if lt IE 8]>
+<!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/5f23dace1a544e2a7275b325/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5f23dace1a544e2a7275b325/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 
-    <!-- ./Making stripe menu navigation -->
-    <nav id="header-handle" class="st-nav navbar main-nav navigation fixed-top no-dropdown-transition">
-        <div id="header-placeholder" class="container">
-            <ul class="st-nav-menu nav navbar-nav">
-                <li class="st-nav-section nav-item">
-                    <a href="https://mazeqube.com/#main" class="navbar-brand">
-                        <!-- First Logo -->
-                        <img src="img/MazeQube_Logo_Icon_Color_45mm.png" alt="MazeQubeLogo" class="logo logo-sticky d-inline-block d-md-none first-logo">
+<!-- ./Making stripe menu navigation -->
+<nav id="header-handle" class="st-nav navbar main-nav navigation fixed-top no-dropdown-transition">
+    <div id="header-placeholder" class="container">
+        <ul class="st-nav-menu nav navbar-nav">
+            <li class="st-nav-section nav-item">
+                <a href="https://mazeqube.com/#main" class="navbar-brand">
+                    <!-- First Logo -->
+                    <img src="img/MazeQube_Logo_Icon_Color_45mm.png" alt="MazeQubeLogo" class="logo logo-sticky d-inline-block d-md-none first-logo">
 
-                        <!-- Second Logo (hide on mobile) -->
-                        <img src="img/MazeQube_Logo_Icon_White_45mm.png" alt="MazeQubeLogo" class="logo logo-sticky d-inline-block second-logo">
+                    <!-- Second Logo (hide on mobile) -->
+                    <img src="img/MazeQube_Logo_Icon_White_45mm.png" alt="MazeQubeLogo" class="logo logo-sticky d-inline-block second-logo">
 
-                        <!-- Third Logo (show mobile only) -->
-                        <img src="img/mazeqube-black-font-mobile.png" alt="MazeQubeLogo" class="logo-sticky d-inline-block d-md-none third-logo">
-                    </a>
-                </li>
-                <li class="st-nav-section st-nav-primary nav-item">
-                    <a class="st-root-link nav-link" href="https://mazeqube.com/">Home</a>
-                    <a class="st-root-link nav-link" href="/blog-grid.html">Business Solutions</a>
-                    <a class="st-root-link item-company st-has-dropdown nav-link active" data-dropdown="industries" href="">Industries</a>
-                    <a class="st-root-link nav-link" href="/partner-with-us.html">Partner with us</a>
-                    <a class="st-root-link nav-link" href="/contact.html">Contact us</a>
-                    <a class="st-root-link nav-link" href="/event.html">Events</a>
-                </li>
-                <!-- Mobile Navigation -->
-                <li class="st-nav-section st-nav-mobile nav-item">
-                    <button class="st-root-link navbar-toggler" type="button" aria-expanded="false" aria-controls="navbarMenu" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="st-popup" id="navbarMenu">
-                        <div class="st-popup-container">
-                            <a class="st-popup-close-button">Close</a>
-                            <div id="header-placeholder-mobile" class="st-dropdown-content-group">
-                                <h4 class="text-uppercase regular">Pages</h4>
-                                <a class="regular text-primary" href="/blog-grid.html"><i class="far fa-building me-2"></i> Business Solutions</a>
-                                <a class="regular text-success" href="/partner-with-us.html"><i class="far fa-envelope me-2"></i> Partner with Us</a>
-                                <!--                                <a class="regular text-warning" href="pricing.html"><i class="fas fa-hand-holding-usd me-2"></i> Pricing</a>-->
-                                <a class="regular text-info" href="/contact.html"><i class="far fa-envelope me-2"></i> Contact Us</a>
-                                <a class="regular text-info" href="/event.html"><i class="far fa-calendar-alt me-2"></i> Events</a>
-                            </div>
-                            <div class="st-dropdown-content-group border-top bw-2">
-                                <h4 class="text-uppercase regular">Industries</h4>
-                                <div class="row">
-                                    <div id="header-industries-mobile" class="col me-4">
-                                        <a target="_blank" href="/industries-first.html">Gift Card</a>
-                                        <a target="_blank" href="/industries-second.html">Chamber of Commerce Management</a>
-                                        <a target="_blank" href="/industries-third.html">Inventory Management</a>
-                                        <a target="_blank" href="/industries-four.html">Banking Software Solutions</a>
-                                    </div>
-                                    <!--<div class="col me-4">
-                                        <a target="_blank" href="components/overlay.html">Overlay</a>
-                                        <a target="_blank" href="components/progress.html">Progress</a>
-                                        <a target="_blank" href="components/lightbox.html">Lightbox</a>
-                                        <a target="_blank" href="components/tab.html">Tabs</a>
-                                        <a target="_blank" href="components/tables.html">Tables</a>
-                                        <a target="_blank" href="components/typography.html">Typography</a>
-                                    </div>-->
-                                </div>
-                            </div>
-                            <!--<div class="st-dropdown-content-group bg-light b-t">
-                                <a href="login.html">Sign in <i class="fas fa-arrow-right"></i></a>
-                            </div>-->
+                    <!-- Third Logo (show mobile only) -->
+                    <img src="img/mazeqube-black-font-mobile.png" alt="MazeQubeLogo" class="logo-sticky d-inline-block d-md-none third-logo">
+                </a>
+            </li>
+            <li class="st-nav-section st-nav-primary nav-item">
+                <a class="st-root-link nav-link" href="https://mazeqube.com/">Home</a>
+                <a class="st-root-link nav-link" href="/blog-grid.html">Business Solutions</a>
+                <a class="st-root-link item-company st-has-dropdown nav-link active" data-dropdown="industries" href="">Industries</a>
+                <a class="st-root-link nav-link" href="/partner-with-us.html">Partner with us</a>
+                <a class="st-root-link nav-link" href="/contact.html">Contact us</a>
+                <a class="st-root-link nav-link" href="/event.html">Events</a>
+            </li>
+            <!-- Mobile Navigation -->
+            <li class="st-nav-section st-nav-mobile nav-item">
+                <button class="st-root-link navbar-toggler" type="button" aria-expanded="false" aria-controls="navbarMenu" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="st-popup" id="navbarMenu">
+                    <div class="st-popup-container">
+                        <a class="st-popup-close-button">Close</a>
+                        <div id="header-placeholder-mobile" class="st-dropdown-content-group">
+                            <h4 class="text-uppercase regular">Pages</h4>
+                            <a class="regular text-primary" href="/blog-grid.html"><i class="far fa-building me-2"></i> Business Solutions</a>
+                            <a class="regular text-success" href="/partner-with-us.html"><i class="far fa-envelope me-2"></i> Partner with Us</a>
+                            <!--                                <a class="regular text-warning" href="pricing.html"><i class="fas fa-hand-holding-usd me-2"></i> Pricing</a>-->
+                            <a class="regular text-info" href="/contact.html"><i class="far fa-envelope me-2"></i> Contact Us</a>
+                            <a class="regular text-info" href="/event.html"><i class="far fa-calendar-alt me-2"></i> Events</a>
                         </div>
+                        <div class="st-dropdown-content-group border-top bw-2">
+                            <h4 class="text-uppercase regular">Industries</h4>
+                            <div class="row">
+                                <div id="header-industries-mobile" class="col me-4">
+                                    <a target="_blank" href="/industries-first.html">Gift Card</a>
+                                    <a target="_blank" href="/industries-second.html">Chamber of Commerce Management</a>
+                                    <a target="_blank" href="/industries-third.html">Inventory Management</a>
+                                    <a target="_blank" href="/industries-four.html">Banking Software Solutions</a>
+                                </div>
+                                <!--<div class="col me-4">
+                                    <a target="_blank" href="components/overlay.html">Overlay</a>
+                                    <a target="_blank" href="components/progress.html">Progress</a>
+                                    <a target="_blank" href="components/lightbox.html">Lightbox</a>
+                                    <a target="_blank" href="components/tab.html">Tabs</a>
+                                    <a target="_blank" href="components/tables.html">Tables</a>
+                                    <a target="_blank" href="components/typography.html">Typography</a>
+                                </div>-->
+                            </div>
+                        </div>
+                        <!--<div class="st-dropdown-content-group bg-light b-t">
+                            <a href="login.html">Sign in <i class="fas fa-arrow-right"></i></a>
+                        </div>-->
                     </div>
-                </li>
-            </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="st-dropdown-root">
+        <div class="st-dropdown-bg">
+            <div class="st-alt-bg"></div>
         </div>
-        <div class="st-dropdown-root">
-            <div class="st-dropdown-bg">
-                <div class="st-alt-bg"></div>
+        <div class="st-dropdown-arrow"></div>
+        <div class="st-dropdown-container">
+            <div id="header-industries" class="st-dropdown-section" data-dropdown="industries">
+                <div class="st-dropdown-content">
+                    <div class="st-dropdown-content-group">
+                        <a class="dropdown-item" href="https://mazeqube.com/industries-first">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-dark text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-credit-card"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">B2B and Retail</h3>
+                                    <p class="m-0 small text-secondary">Modern digital platforms and tailored </p>
+                                    <p class="m-0 small text-secondary">software solutions that streamline operations</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-second">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-secondary text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-users"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Public Sector & Government</h3>
+                                    <p class="m-0 text-secondary small">Software that strengthen service delivery, improve stakeholder</p>
+                                    <p class="m-0 text-secondary small"> engagement, and support regional economic development.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-third">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-box"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Supply Chain & Logistics</h3>
+                                    <p class="m-0 text-secondary small">Solutions that optimise warehouse operations,</p>
+                                    <p class="m-0 text-secondary small">inventory accuracy, and end-to-end fulfilment performance.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-four">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Fintech & Financial Services</h3>
+                                    <p class="m-0 text-secondary small">Secure, compliant and scalable systems engineered for high-volume</p>
+                                    <p class="m-0 text-secondary small">financial operations and digital banking experiences.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-four">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Maritime & Marine Operations</h3>
+                                    <p class="m-0 text-secondary small">Software that enhances port workflows, marina management,</p>
+                                    <p class="m-0 text-secondary small">customer services, and vessel administration.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-four">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Construction & Heavy Operations</h3>
+                                    <p class="m-0 text-secondary small">Practical, field-ready digital solutions designed to improve planning,</p>
+                                    <p class="m-0 text-secondary small"> operational efficiency and equipment management.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="st-dropdown-arrow"></div>
-            <div class="st-dropdown-container">
-                <div id="header-industries" class="st-dropdown-section" data-dropdown="industries">
-                    <div class="st-dropdown-content">
-                        <div class="st-dropdown-content-group">
-                            <a class="dropdown-item" href="https://mazeqube.com/industries-first">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="bg-dark text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-credit-card"></i></div>
-                                    <div class="flex-fill">
-                                        <h3 class="link-title m-0">Gift Card</h3>
-                                        <p class="m-0 text-secondary">Solutions for Sparkling Employee Motivation</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-second">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="bg-secondary text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-users"></i></div>
-                                    <div class="flex-fill">
-                                        <h3 class="link-title m-0">Chamber of Commerce Management</h3>
-                                        <p class="m-0 text-secondary">Solutions for Chamber Management</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-third">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="bg-success text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-box"></i></div>
-                                    <div class="flex-fill">
-                                        <h3 class="link-title m-0">Inventory Management</h3>
-                                        <p class="m-0 text-secondary">WMS, and OMS Solutions</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-four">
-                                <div class="d-flex align-items-center mb-4">
-                                    <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-dollar-sign"></i></div>
-                                    <div class="flex-fill">
-                                        <h3 class="link-title m-0">Banking Software Solutions</h3>
-                                        <p class="m-0 text-secondary">Empowering Your Future with Innovation</p>
-                                    </div>
-                                </div>
-                            </a>
+        </div>
+    </div>
+</nav>
+
+<main class="overflow-hidden">
+    <!-- ./Page header -->
+    <header class="header integrations-header section parallax image-background center-bottom cover overlay overlay-primary alpha-8 text-contrast" style="background-image: url('img/bg/grid.jpg')">
+        <div class="container overflow-hidden">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="bold display-4 text-contrast home">Transforming</h1>
+                    <h2 class="text-contrast"><span class="typed light home-2 display-md-3" data-strings='["Ideas into Reality", "Challenges into Solutions", "Your Business", "Through Innovation"]'></span></h2>
+                </div>
+                <div class="col-md-10 col-lg-8">
+                    <p class="lead">Supporting Businesses 24/7 for the Last 10 Years</p>
+                    <p class="handwritten font-md highlight px-4">Connect with us</p>
+                    <nav class="nav mt-5"><a href="contact.html" class="nav-link me-3 btn btn-rounded btn-success text-contrast enquire">Enquire </a></nav>
+
+                </div>
+            </div>
+        </div>
+        <div class="bubbles-wrap">
+            <div class="bubbles-container">
+                <div style="margin-top: 2%;display: flex;flex-direction: column;align-items: center;">
+                    <i data-feather="package" width="36" height="36" class="stroke-primary" style="margin-bottom: 10px;"></i>
+                    <h2 class="bold" style="text-align: center;">Technology we choose for all your needs</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ./Partners -->
+    <!-- ./Design features -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-heading mb-6 text-center">
+                <h5 class="text-primary bold small text-uppercase">Build better</h5>
+                <h2 class="bold">We build software to fit all your needs</h2>
+            </div>
+            <div class="row gap-y text-center text-md-left">
+                <div class="col-md-4">
+                    <div class="card shadow-hover lift-hover">
+                        <div class="card-body"><i data-feather="image" width="36" height="36" class="stroke-primary"></i>
+                            <h5 class="bold mt-3">Solving business problems</h5>
+                            <p class="">Our services help customers develop high-quality, efficient products to address various business challenges. With extensive experience, we ensure faster product delivery and successful launches. By combining expertise with innovative approaches, we transform your business problems into reality.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-hover lift-hover">
+                        <div class="card-body"><i data-feather="sliders" width="36" height="36" class="stroke-primary"></i>
+                            <h5 class="bold mt-3">Consulting</h5>
+                            <p class="">In today's fast-paced digital landscape, businesses need to stay ahead of technological changes to remain competitive. Our IT Consulting services are designed to help your organization leverage technology to achieve strategic goals, enhance operational efficiency, and drive innovation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-hover lift-hover">
+                        <div class="card-body"><i data-feather="target" width="36" height="36" class="stroke-primary"></i>
+                            <h5 class="bold mt-3">Innovation</h5>
+                            <p class="">In an era where technology reshapes industries, staying ahead means embracing IT innovation that empowers your business. Our IT Innovation services guide you through digital transformation, leveraging emerging technologies to turn your ideas into reality and drive sustainable growth.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
-
-    <main class="overflow-hidden">
-        <!-- ./Page header -->
-        <header class="header integrations-header section parallax image-background center-bottom cover overlay overlay-primary alpha-8 text-contrast" style="background-image: url('img/bg/grid.jpg')">
-            <div class="container overflow-hidden">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h1 class="bold display-4 text-contrast home">Transforming</h1>
-                        <h2 class="text-contrast"><span class="typed light home-2 display-md-3" data-strings='["Ideas into Reality", "Challenges into Solutions", "Your Business", "Through Innovation"]'></span></h2>
-                    </div>
-                    <div class="col-md-10 col-lg-8">
-                        <p class="lead">Supporting Businesses 24/7 for the Last 10 Years</p>
-                        <p class="handwritten font-md highlight px-4">Connect with us</p>
-                        <nav class="nav mt-5"><a href="contact.html" class="nav-link me-3 btn btn-rounded btn-success text-contrast enquire">Enquire </a></nav>
-
-                    </div>
-                </div>
+    </section>
+    <!-- ./Tools for everyone - Swiper -->
+    <!--<section class="section b-b b-t bg-light">
+        <div class="container">
+            <div class="section-heading text-center"><i data-feather="sliders" width="36" height="36" class="stroke-primary"></i>
+                <h2 class="bold">Tools for everyone</h2>
+                <p class="lead text-muted">Get ready in no time... just like 1, 2 & 3.</p>
             </div>
-            <div class="bubbles-wrap">
-                <div class="bubbles-container">
-                    <div style="margin-top: 2%;display: flex;flex-direction: column;align-items: center;">
-                        <i data-feather="package" width="36" height="36" class="stroke-primary" style="margin-bottom: 10px;"></i>
-                        <h2 class="bold" style="text-align: center;">Technology we choose for all your needs</h2>
-                    </div>
+            <div class="row align-items-end">
+                <div class="col-lg-4">
+                    <h2 class="bold">Start the right way<br><span class="light">Start with DashCore</span></h2>
+                    <p class="lead text-secondary">Thinking about a new project? Start in no time with the tools DashCore brings to you.</p><a href="pricing.html" class="btn btn-primary btn-rounded mt-4">Choose the right plan <i class="ms-3 fas fa-long-arrow-alt-right"></i></a>
+                    <ol id="sw-nav-tools" class="nav nav-process nav-circle nav-justified mt-5">
+                        <li class="nav-item active"><a class="nav-link" href="#" data-step="1"><small class="mt-4 absolute">Inbox</small></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-step="2"><small class="mt-4 absolute">Calendar</small></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-step="3"><small class="mt-4 absolute">Invoicing</small></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-step="4"><small class="mt-4 absolute">Reporting</small></a></li>
+                    </ol>
                 </div>
-            </div>
-        </header>
-        <!-- ./Partners -->
-        <!-- ./Design features -->
-        <section id="features" class="section">
-            <div class="container">
-                <div class="section-heading mb-6 text-center">
-                    <h5 class="text-primary bold small text-uppercase">Build better</h5>
-                    <h2 class="bold">We build software to fit all your needs</h2>
-                </div>
-                <div class="row gap-y text-center text-md-left">
-                    <div class="col-md-4">
-                        <div class="card shadow-hover lift-hover">
-                            <div class="card-body"><i data-feather="image" width="36" height="36" class="stroke-primary"></i>
-                                <h5 class="bold mt-3">Solving business problems</h5>
-                                <p class="">Our services help customers develop high-quality, efficient products to address various business challenges. With extensive experience, we ensure faster product delivery and successful launches. By combining expertise with innovative approaches, we transform your business problems into reality.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-hover lift-hover">
-                            <div class="card-body"><i data-feather="sliders" width="36" height="36" class="stroke-primary"></i>
-                                <h5 class="bold mt-3">Consulting</h5>
-                                <p class="">In today's fast-paced digital landscape, businesses need to stay ahead of technological changes to remain competitive. Our IT Consulting services are designed to help your organization leverage technology to achieve strategic goals, enhance operational efficiency, and drive innovation.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-hover lift-hover">
-                            <div class="card-body"><i data-feather="target" width="36" height="36" class="stroke-primary"></i>
-                                <h5 class="bold mt-3">Innovation</h5>
-                                <p class="">In an era where technology reshapes industries, staying ahead means embracing IT innovation that empowers your business. Our IT Innovation services guide you through digital transformation, leveraging emerging technologies to turn your ideas into reality and drive sustainable growth.</p>
+                <div class="col-lg-7 ms-lg-auto">
+                    <div class="browser shadow mt-4 mt-md-0" data-aos="fade-left">
+                        <div class="swiper-container" data-sw-navigation="#sw-nav-tools">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/screens/dash/1.png" alt="" class="img-responsive"></div>
+                                <div class="swiper-slide"><img src="img/screens/dash/2.png" alt="" class="img-responsive"></div>
+                                <div class="swiper-slide"><img src="img/screens/dash/3.png" alt="" class="img-responsive"></div>
+                                <div class="swiper-slide"><img src="img/screens/dash/4.png" alt="" class="img-responsive"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- ./Tools for everyone - Swiper -->
-        <!--<section class="section b-b b-t bg-light">
-            <div class="container">
-                <div class="section-heading text-center"><i data-feather="sliders" width="36" height="36" class="stroke-primary"></i>
-                    <h2 class="bold">Tools for everyone</h2>
-                    <p class="lead text-muted">Get ready in no time... just like 1, 2 & 3.</p>
+        </div>
+    </section>-->
+    <!-- ./Single testimonial - Left -->
+    <section class="singl-testimonial shadow">
+        <div class="container-fluid py-0">
+            <div class="row align-items-center gradient gradient-primary-dark text-contrast">
+                <div class="col-md-3 mx-auto py-4 py-md-0">
+                    <p class="font-md bold mt-1 text-contrast">Achieving more together : Empowering success through teamwork and collaboration.</p>
+                    <hr class="my-4">
+                    <div class="small text-contrast"><span class="bold d-block">MazeQube Team</span> Helping businesses since 2016</div>
                 </div>
-                <div class="row align-items-end">
-                    <div class="col-lg-4">
-                        <h2 class="bold">Start the right way<br><span class="light">Start with DashCore</span></h2>
-                        <p class="lead text-secondary">Thinking about a new project? Start in no time with the tools DashCore brings to you.</p><a href="pricing.html" class="btn btn-primary btn-rounded mt-4">Choose the right plan <i class="ms-3 fas fa-long-arrow-alt-right"></i></a>
-                        <ol id="sw-nav-tools" class="nav nav-process nav-circle nav-justified mt-5">
-                            <li class="nav-item active"><a class="nav-link" href="#" data-step="1"><small class="mt-4 absolute">Inbox</small></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-step="2"><small class="mt-4 absolute">Calendar</small></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-step="3"><small class="mt-4 absolute">Invoicing</small></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-step="4"><small class="mt-4 absolute">Reporting</small></a></li>
-                        </ol>
+                <div class="col-12 col-md-7 image-background cover" style="background-image: url(img/testimonials/1.jpg);"></div>
+            </div>
+        </div>
+    </section><!-- ./Features - hover animated -->
+    <section class="section bg-light bg-light-gradient edge bottom-right">
+        <div class="container bring-to-front">
+            <div class="section-heading text-center">
+                <h5 class="text-primary bold small text-uppercase">Let's do business</h5>
+                <h2 class="bold">What we offer</h2>
+            </div>
+            <div class="row gap-y">
+                <div class="col-md-6">
+                    <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/time.svg)">
+                        <h3 class="mobile-view" style="margin-left: 13%;">Save time</h3>
+                        <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Accelerate your digital transformation with our expert IT development solutions. From custom software to mobile apps and cloud integrations, we streamline your processes, reducing time-to-market while ensuring quality. Let us handle the technology, so you can focus on growth.</p>
                     </div>
-                    <div class="col-lg-7 ms-lg-auto">
-                        <div class="browser shadow mt-4 mt-md-0" data-aos="fade-left">
-                            <div class="swiper-container" data-sw-navigation="#sw-nav-tools">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="img/screens/dash/1.png" alt="" class="img-responsive"></div>
-                                    <div class="swiper-slide"><img src="img/screens/dash/2.png" alt="" class="img-responsive"></div>
-                                    <div class="swiper-slide"><img src="img/screens/dash/3.png" alt="" class="img-responsive"></div>
-                                    <div class="swiper-slide"><img src="img/screens/dash/4.png" alt="" class="img-responsive"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/done.svg)">
+                        <h3 class="mobile-view" style="margin-left: 13%;">Get things done</h3>
+                        <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Get things done faster with our IT development services. From concept to deployment, we handle all the tech details, allowing you to focus on what matters most. Boost efficiency, reduce costs, and achieve your goals with expert-driven solutions that deliver results.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/grow.svg)">
+                        <h3 class="mobile-view" style="margin-left: 13%;">Grow your business</h3>
+                        <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Grow your business with our IT development solutions. We provide scalable, future-proof technologies that drive innovation and efficiency. Whether it's optimizing existing systems or building from the ground up, our expertise helps you expand faster and stay ahead.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/goals.svg)">
+                        <h3 class="mobile-view" style="margin-left: 13%;">Accomplish your goals</h3>
+                        <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Accomplish your goals with our IT development services. We transform your vision into reality with custom-built solutions designed to meet your unique business objectives. From start to finish, our team ensures seamless execution, empowering you to achieve success efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- ./Top-notch appearance - Big screen left -->
+    <section class="section">
+        <div class="container-wide bring-to-front">
+            <div class="row gap-y align-items-center text-center text-lg-start">
+                <div class="col-10 col-lg-4 mx-auto order-md-2">
+                    <div class="mb-5">
+                        <h2>Crafted Software Solutions for Your Unique Business Needs</h2>
+                        <p class="lead text-secondary">We build custom software for accounting businesses to generate invoices and manage client billing, deliver solutions for federal US clients to handle community meetings and information, and configure data pipelines to help customers pull data and run analytics for increased revenue.</p>
+                    </div>
+                    <p class="lead text-secondary">Our customers have been supporting their clients for 15 to 30 years. We ensure 24/7 monitoring of our applications with automated tools. With our team present around the globe, we offer continuous support throughout the day.</p><a href="#" class="btn btn-info text-contrast btn-rounded mt-4">Learn More</a>
+                </div>
+                <div class="col-12 col-lg-6 ps-0 order-md-1"><img src="img/screens/dash/1.png" alt="" class="img-responsive shadow" data-aos="fade-right"></div>
+            </div>
+        </div>
+    </section><!-- ./Lightweight HTML - Big screen right -->
+    <section class="section">
+        <div class="container-wide">
+            <div class="row gap-y align-items-center text-center text-lg-start">
+                <div class="col-10 col-lg-3 mx-auto">
+                    <div class="mb-5">
+                        <h2>AI Agents</h2>
+                        <p class="lead text-secondary">We create intelligent agents capable of performing business tasks, supporting your team, answering customer queries, and automating operational workflows. These agents can work around the clock and adapt to your business rules.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7 pe-0">
+                    <video controls preload="none" class="img-responsive shadow aos-init aos-animate" poster="img/screens/dash/2.png">
+                        <source src="video/Zoho-ChatBot.mp4"  type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section><!-- ./Single testimonial - Right -->
+    <section class="singl-testimonial shadow">
+        <div class="container-fluid py-0">
+            <div class="row align-items-center gradient gradient-navy-blue text-contrast">
+                <div class="col-md-7 image-background cover center-top" style="background-image: url(img/testimonials/2.jpg);"></div>
+                <div class="col-md-3 mx-auto py-4 py-md-0">
+                    <blockquote class="bold mt-1 text-contrast"><i class="quote fas fa-quote-left"></i> "Working with MazeQube has transformed our software development approach. Their innovative solutions streamline processes, enhancing productivity and collaboration. With a user-friendly interface and responsive support, I highly recommend MazeQube to any organization looking to elevate their projects!"</blockquote>
+                    <hr class="my-4">
+                    <div class="small text-contrast"><span class="bold d-block">Jean Doe,</span> CEO & Founder of MobiSoft</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./FAQs -->
+    <!--
+            <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2>Do you have <span class="bold">questions?</span></h2>
+                            <p class="lead">Not sure how this template can help you? Wonder why you need to buy our theme?</p>
+                            <p class="text-muted">Here are the answers to some of the most common questions we hear from our appreciated customers</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="accordion accordion-clean" id="faqs-accordion">
+                                <div class="card mb-3">
+                                    <div class="card-header"><a href="#" class="card-title btn" data-bs-toggle="collapse" data-bs-target="#v1-q1"><i class="fas fa-angle-down angle"></i> What does the package include?</a></div>
+                                    <div id="v1-q1" class="collapse show" data-bs-parent="#faqs-accordion">
+                                        <div class="card-body">When you buy Dashcore, you get all you see in the demo but the images. We include SASS files for styling, complete JS files with comments, all HTML variations. Besides we include all mobile PSD mockups.</div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-header"><a href="#" class="card-title btn collapsed" data-bs-toggle="collapse" data-bs-target="#v1-q2"><i class="fas fa-angle-down angle"></i> What is the typical response time for a support question?</a></div>
+                                    <div id="v1-q2" class="collapse" data-bs-parent="#faqs-accordion">
+                                        <div class="card-body">Since you report us a support question we try to make our best to find out what is going on, depending on the case it could take more or les time, however a standard time could be minutes or hours.</div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-header"><a href="#" class="card-title btn collapsed" data-bs-toggle="collapse" data-bs-target="#v1-q3"><i class="fas fa-angle-down angle"></i> What do I need to know to customize this template?</a></div>
+                                    <div id="v1-q3" class="collapse" data-bs-parent="#faqs-accordion">
+                                        <div class="card-body">Our documentation give you all you need to customize your copy. However you will need some basic web design knowledge (HTML, Javascript and CSS)</div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-header"><a href="#" class="card-title btn collapsed" data-bs-toggle="collapse" data-bs-target="#v1-q4"><i class="fas fa-angle-down angle"></i> Can I suggest a new feature?</a></div>
+                                    <div id="v1-q4" class="collapse" data-bs-parent="#faqs-accordion">
+                                        <div class="card-body">Definitely <span class="bold">Yes</span>, you can contact us to let us know your needs. If your suggestion represents any value to both we can include it as a part of the theme or you can request a custom build by an extra cost. Please note it could take some time in order for the feature to be implemented.</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>-->
-        <!-- ./Single testimonial - Left -->
-        <section class="singl-testimonial shadow">
-            <div class="container-fluid py-0">
-                <div class="row align-items-center gradient gradient-primary-dark text-contrast">
-                    <div class="col-md-3 mx-auto py-4 py-md-0">
-                        <p class="font-md bold mt-1 text-contrast">Achieving more together : Empowering success through teamwork and collaboration.</p>
-                        <hr class="my-4">
-                        <div class="small text-contrast"><span class="bold d-block">MazeQube Team</span> Helping businesses since 2016</div>
-                    </div>
-                    <div class="col-12 col-md-7 image-background cover" style="background-image: url(img/testimonials/1.jpg);"></div>
+            </section>
+    -->
+    <!-- ./CTA - Start Now -->
+    <section class="section mt-7">
+        <div class="container bring-to-front pt-0">
+            <div class="shadow rounded text-center bg-dark p-5">
+                <div class="text-contrast">
+                    <p class="handwritten font-md highlight px-4" style="margin-block: -2%;">Why wait? Connect now!</p>
+                    <nav class="nav mt-5"><a href="contact.html" class="nav-link me-3 btn btn-rounded btn-success text-contrast" style="margin-left: 41%;">Enquire </a></nav>
                 </div>
             </div>
-        </section><!-- ./Features - hover animated -->
-        <section class="section bg-light bg-light-gradient edge bottom-right">
-            <div class="container bring-to-front">
-                <div class="section-heading text-center">
-                    <h5 class="text-primary bold small text-uppercase">Let's do business</h5>
-                    <h2 class="bold">What we offer</h2>
-                </div>
-                <div class="row gap-y">
-                    <div class="col-md-6">
-                        <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/time.svg)">
-                            <h3 class="mobile-view" style="margin-left: 13%;">Save time</h3>
-                            <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Accelerate your digital transformation with our expert IT development solutions. From custom software to mobile apps and cloud integrations, we streamline your processes, reducing time-to-market while ensuring quality. Let us handle the technology, so you can focus on growth.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/done.svg)">
-                            <h3 class="mobile-view" style="margin-left: 13%;">Get things done</h3>
-                            <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Get things done faster with our IT development services. From concept to deployment, we handle all the tech details, allowing you to focus on what matters most. Boost efficiency, reduce costs, and achieve your goals with expert-driven solutions that deliver results.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/grow.svg)">
-                            <h3 class="mobile-view" style="margin-left: 13%;">Grow your business</h3>
-                            <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Grow your business with our IT development solutions. We provide scalable, future-proof technologies that drive innovation and efficiency. Whether it's optimizing existing systems or building from the ground up, our expertise helps you expand faster and stay ahead.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/goals.svg)">
-                            <h3 class="mobile-view" style="margin-left: 13%;">Accomplish your goals</h3>
-                            <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Accomplish your goals with our IT development services. We transform your vision into reality with custom-built solutions designed to meet your unique business objectives. From start to finish, our team ensures seamless execution, empowering you to achieve success efficiently.</p>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </section>
+    <!-- ./CTA - Create Account -->
+    <!--<section class="section bg-light edge top-left">
+        <div class="container pt-0">
+            <div class="d-flex align-items-center flex-column flex-md-row">
+                <div class="text-center text-md-start">
+                    <p class="light mb-0 text-primary lead">Ready to get started?</p>
+                    <h2 class="mt-0 bold">Create an account now</h2>
+                </div><a href="register.html" class="btn btn-primary btn-rounded mt-3 mt-md-0 ms-md-auto">Create DashCore account</a>
             </div>
-        </section><!-- ./Top-notch appearance - Big screen left -->
-        <section class="section">
-            <div class="container-wide bring-to-front">
-                <div class="row gap-y align-items-center text-center text-lg-start">
-                    <div class="col-10 col-lg-4 mx-auto order-md-2">
-                        <div class="mb-5">
-                            <h2>Crafted Software Solutions for Your Unique Business Needs</h2>
-                            <p class="lead text-secondary">We build custom software for accounting businesses to generate invoices and manage client billing, deliver solutions for federal US clients to handle community meetings and information, and configure data pipelines to help customers pull data and run analytics for increased revenue.</p>
-                        </div>
-                        <p class="lead text-secondary">Our customers have been supporting their clients for 15 to 30 years. We ensure 24/7 monitoring of our applications with automated tools. With our team present around the globe, we offer continuous support throughout the day.</p><a href="#" class="btn btn-info text-contrast btn-rounded mt-4">Learn More</a>
-                    </div>
-                    <div class="col-12 col-lg-6 ps-0 order-md-1"><img src="img/screens/dash/1.png" alt="" class="img-responsive shadow" data-aos="fade-right"></div>
-                </div>
-            </div>
-        </section><!-- ./Lightweight HTML - Big screen right -->
-        <section class="section">
-            <div class="container-wide">
-                <div class="row gap-y align-items-center text-center text-lg-start">
-                    <div class="col-10 col-lg-4 mx-auto">
-                        <div class="mb-5">
-                            <h2>Streamlined Event Scheduling and Payment Collection for Your Business.</h2>
-                            <p class="lead text-secondary">For several clients, we’ve developed event scheduling modules that facilitate event hosting. These modules allow their customers to register for events and make payments for paid events seamlessly.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 pe-0"><img src="img/screens/dash/2.png" alt="" class="img-responsive shadow" data-aos="fade-left"></div>
-                </div>
-            </div>
-        </section><!-- ./Single testimonial - Right -->
-        <section class="singl-testimonial shadow">
-            <div class="container-fluid py-0">
-                <div class="row align-items-center gradient gradient-navy-blue text-contrast">
-                    <div class="col-md-7 image-background cover center-top" style="background-image: url(img/testimonials/2.jpg);"></div>
-                    <div class="col-md-3 mx-auto py-4 py-md-0">
-                        <blockquote class="bold mt-1 text-contrast"><i class="quote fas fa-quote-left"></i> "Working with MazeQube has transformed our software development approach. Their innovative solutions streamline processes, enhancing productivity and collaboration. With a user-friendly interface and responsive support, I highly recommend MazeQube to any organization looking to elevate their projects!"</blockquote>
-                        <hr class="my-4">
-                        <div class="small text-contrast"><span class="bold d-block">Jean Doe,</span> CEO & Founder of MobiSoft</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ./FAQs -->
-<!--
-        <section class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2>Do you have <span class="bold">questions?</span></h2>
-                        <p class="lead">Not sure how this template can help you? Wonder why you need to buy our theme?</p>
-                        <p class="text-muted">Here are the answers to some of the most common questions we hear from our appreciated customers</p>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="accordion accordion-clean" id="faqs-accordion">
-                            <div class="card mb-3">
-                                <div class="card-header"><a href="#" class="card-title btn" data-bs-toggle="collapse" data-bs-target="#v1-q1"><i class="fas fa-angle-down angle"></i> What does the package include?</a></div>
-                                <div id="v1-q1" class="collapse show" data-bs-parent="#faqs-accordion">
-                                    <div class="card-body">When you buy Dashcore, you get all you see in the demo but the images. We include SASS files for styling, complete JS files with comments, all HTML variations. Besides we include all mobile PSD mockups.</div>
-                                </div>
-                            </div>
-                            <div class="card mb-3">
-                                <div class="card-header"><a href="#" class="card-title btn collapsed" data-bs-toggle="collapse" data-bs-target="#v1-q2"><i class="fas fa-angle-down angle"></i> What is the typical response time for a support question?</a></div>
-                                <div id="v1-q2" class="collapse" data-bs-parent="#faqs-accordion">
-                                    <div class="card-body">Since you report us a support question we try to make our best to find out what is going on, depending on the case it could take more or les time, however a standard time could be minutes or hours.</div>
-                                </div>
-                            </div>
-                            <div class="card mb-3">
-                                <div class="card-header"><a href="#" class="card-title btn collapsed" data-bs-toggle="collapse" data-bs-target="#v1-q3"><i class="fas fa-angle-down angle"></i> What do I need to know to customize this template?</a></div>
-                                <div id="v1-q3" class="collapse" data-bs-parent="#faqs-accordion">
-                                    <div class="card-body">Our documentation give you all you need to customize your copy. However you will need some basic web design knowledge (HTML, Javascript and CSS)</div>
-                                </div>
-                            </div>
-                            <div class="card mb-3">
-                                <div class="card-header"><a href="#" class="card-title btn collapsed" data-bs-toggle="collapse" data-bs-target="#v1-q4"><i class="fas fa-angle-down angle"></i> Can I suggest a new feature?</a></div>
-                                <div id="v1-q4" class="collapse" data-bs-parent="#faqs-accordion">
-                                    <div class="card-body">Definitely <span class="bold">Yes</span>, you can contact us to let us know your needs. If your suggestion represents any value to both we can include it as a part of the theme or you can request a custom build by an extra cost. Please note it could take some time in order for the feature to be implemented.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
--->
-        <!-- ./CTA - Start Now -->
-        <section class="section mt-7">
-            <div class="container bring-to-front pt-0">
-                <div class="shadow rounded text-center bg-dark p-5">
-                    <div class="text-contrast">
-                        <p class="handwritten font-md highlight px-4" style="margin-block: -2%;">Why wait? Connect now!</p>
-                        <nav class="nav mt-5"><a href="contact.html" class="nav-link me-3 btn btn-rounded btn-success text-contrast" style="margin-left: 41%;">Enquire </a></nav>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ./CTA - Create Account -->
-        <!--<section class="section bg-light edge top-left">
-            <div class="container pt-0">
-                <div class="d-flex align-items-center flex-column flex-md-row">
-                    <div class="text-center text-md-start">
-                        <p class="light mb-0 text-primary lead">Ready to get started?</p>
-                        <h2 class="mt-0 bold">Create an account now</h2>
-                    </div><a href="register.html" class="btn btn-primary btn-rounded mt-3 mt-md-0 ms-md-auto">Create DashCore account</a>
-                </div>
-            </div>
-        </section>-->
-        <!-- ./Footer - Five Columns -->
+        </div>
+    </section>-->
+    <!-- ./Footer - Five Columns -->
 
     <div id="footer-placeholder"></div>
     <script src="js/footer.js"></script>
 
+</main>
 
-    </main><!-- themeforest:js -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/card.js"></script>
-    <script src="js/counterup2.js"></script>
-    <script src="js/noise.js"></script>
-    <script src="js/noframework.waypoints.js"></script>
-    <script src="js/odometer.js"></script>
-    <script src="js/prism.js"></script>
-    <script src="js/simplebar.js"></script>
-    <script src="js/swiper-bundle.js"></script>
-    <script src="js/jquery.easing.js"></script>
-    <script src="js/jquery.validate.js"></script>
-    <script src="js/jquery.smartWizard.js"></script>
-    <script src="js/feather.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/cookieconsent.js"></script>
-    <script src="js/jquery.animatebar.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/forms.js"></script>
-    <script src="js/stripe-bubbles.js"></script>
-    <script src="js/stripe-menu.js"></script>
-    <script src="js/credit-card.js"></script>
-    <script src="js/pricing.js"></script>
-    <script src="js/shop.js"></script>
-    <script src="js/svg.js"></script>
-    <script src="js/site.js"></script>
-    <script src="js/wizards.js"></script>
-    <script src="js/cookie-consent-util.js"></script>
-    <script src="js/cookie-consent-themes.js"></script>
-    <script src="js/cookie-consent-custom-css.js"></script>
-    <script src="js/cookie-consent-informational.js"></script>
-    <script src="js/cookie-consent-opt-out.js"></script>
-    <script src="js/cookie-consent-opt-in.js"></script>
-    <script src="js/cookie-consent-location.js"></script>
-    <script src="js/demo.js"></script>
-    <script src="js/header.js"></script>
+<!-- Enquiry Modal HTML -->
+<div class="enquiry-modal-overlay" id="enquiryModal">
+    <div class="enquiry-modal">
 
-    <!-- endinject -->
+        <form id="enquiryForm">
+                <div id="block-card" class="card rounded-4 shadow p-4">
+                    <div class="card-body">
+                        <div class="enquiry-modal-header">
+                            <h2>Get In Touch</h2>
+                            <button class="enquiry-close-btn" id="closeModalBtn">&times;</button>
+                        </div>
+                        <form id="custom-form" class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up" novalidate="novalidate">
+                            <div class="mb-4">
+                                <label for="firstname" class="fw-bold mb-0">First Name</label>
+                                <input type="text" name="firstname" placeholder="First Name" class="form-control" id="firstname" required="">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="lastname" class="fw-bold mb-0">Last Name</label>
+                                <input type="text" name="lastname" placeholder="Last Name" class="form-control" id="lastname" required="">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="fw-bold mb-0">Email address</label>
+                                <div id="emailHelp" class="small form-text text-muted mt-0 mb-2 fst-italic">We'll never share your email with anyone else.</div>
+                                <input type="email" name="email" placeholder="Valid Email" class="form-control" id="email" required="">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="jobtitle" class="fw-bold mb-0">Job Title</label>
+                                <input type="jobtitle" name="jobtitle" placeholder="Job Title" class="form-control" id="jobtitle" required="">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="name" class="fw-bold mb-0">Company Name</label>
+                                <input type="name" name="name" placeholder="Company Name" class="form-control" id="name" required="">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="country" class="fw-bold mb-0">Country/Region</label>
+                                <input list="country-list" type="text" name="country" placeholder="Country/Region" class="form-control" id="country" required="">
+                                <datalist id="country-list"></datalist>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="fw-bold" for="message">Message</label>
+                                <textarea name="message" placeholder="What do you want to let us know?" class="form-control" id="message" rows="3" required=""></textarea>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary shadow-primary" id="submitButton" type="submit" data-loading-text="Sending...">
+                                    <span class="spinner spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                    <span class="text">Send Message</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="response-message" style="display: none;">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <p class="fs-3 mb-3">Thank you for contacting us!!</p>
+                    <p class="fw-bold message">We have your message.</p>
+                </div>
+        </form>
+    </div>
+</div>
+
+<!-- themeforest:js -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/card.js"></script>
+<script src="js/counterup2.js"></script>
+<script src="js/noise.js"></script>
+<script src="js/noframework.waypoints.js"></script>
+<script src="js/odometer.js"></script>
+<script src="js/prism.js"></script>
+<script src="js/simplebar.js"></script>
+<script src="js/swiper-bundle.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.smartWizard.js"></script>
+<script src="js/feather.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/typed.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+<script src="js/cookieconsent.js"></script>
+<script src="js/jquery.animatebar.js"></script>
+<script src="js/common.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/stripe-bubbles.js"></script>
+<script src="js/stripe-menu.js"></script>
+<script src="js/credit-card.js"></script>
+<script src="js/pricing.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/svg.js"></script>
+<script src="js/site.js"></script>
+<script src="js/wizards.js"></script>
+<script src="js/cookie-consent-util.js"></script>
+<script src="js/cookie-consent-themes.js"></script>
+<script src="js/cookie-consent-custom-css.js"></script>
+<script src="js/cookie-consent-informational.js"></script>
+<script src="js/cookie-consent-opt-out.js"></script>
+<script src="js/cookie-consent-opt-in.js"></script>
+<script src="js/cookie-consent-location.js"></script>
+<script src="js/demo.js"></script>
+<script src="js/header.js"></script>
+
+<!-- Enquiry Modal JavaScript -->
+<script>
+    // Modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('enquiryModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const enquiryForm = document.getElementById('enquiryForm');
+
+        // Check if modal has already been shown in this session
+        let modalShown = sessionStorage.getItem('mazequbeModalShown');
+
+        // Open modal
+        function openModal() {
+            modal.classList.add('active');
+            document.body.classList.add('modal-open'); // Prevent scrolling
+        }
+
+        // Close modal
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open'); // Restore scrolling
+        }
+
+        // Close modal
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Form submission
+        enquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Basic form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !service || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // In a real application, you would send the form data to a server here
+            console.log('Form submitted:', {
+                name,
+                email,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                service,
+                message
+            });
+
+            // Show success message
+            alert('Thank you for your enquiry! We will get back to you soon.');
+            closeModal();
+            enquiryForm.reset();
+        });
+
+        // Show modal on scroll
+        function checkScroll() {
+            if (modalShown) return; // Don't show if already shown
+
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            // Show modal when user has scrolled 60% of the page
+            if (scrollPosition > (documentHeight - windowHeight) * 0.6) {
+                openModal();
+                sessionStorage.setItem('mazequbeModalShown', 'true');
+                modalShown = true;
+
+                // Remove the scroll event listener after showing the modal once
+                window.removeEventListener('scroll', checkScroll);
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll);
+    });
+</script>
+<!-- endinject -->
 </body>
 
 </html>
