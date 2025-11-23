@@ -205,6 +205,168 @@
             overflow: hidden !important;
         }
     </style>
+    <style>
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .custom-controls {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .play-btn {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+
+        .play-btn i {
+            font-size: 30px;
+            color: #333;
+            margin-left: 5px;
+        }
+
+        .video-container.playing .custom-controls {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .controls-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .video-container:hover .controls-bar {
+            opacity: 1;
+        }
+
+        .progress-container {
+            flex-grow: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            margin: 0 15px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #ff4757;
+            border-radius: 4px;
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        .time-display {
+            color: white;
+            font-size: 14px;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+
+        .volume-slider {
+            width: 80px;
+            margin-left: 8px;
+        }
+
+        .fullscreen-btn {
+            margin-left: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .controls-bar {
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+
+            .progress-container {
+                order: 1;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .time-display {
+                order: 2;
+                margin-right: auto;
+            }
+
+            .volume-control {
+                order: 3;
+                margin-left: 0;
+            }
+
+            .fullscreen-btn {
+                order: 4;
+                margin-left: auto;
+            }
+        }
+    </style>
     <!-- endinject -->
 </head>
 <body>
@@ -482,35 +644,75 @@
             </div>
         </div>
     </section><!-- ./Features - hover animated -->
-    <section class="section bg-light bg-light-gradient edge bottom-right">
+    <section class="section bg-light bg-light-gradient edge bottom-right p-1">
         <div class="container bring-to-front">
             <div class="section-heading text-center">
                 <h5 class="text-primary bold small text-uppercase">Let's do business</h5>
                 <h2 class="bold">What we offer</h2>
             </div>
             <div class="row gap-y">
-                <div class="col-md-6">
-                    <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/time.svg)">
-                        <h3 class="mobile-view" style="margin-left: 13%;">Save time</h3>
-                        <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Accelerate your digital transformation with our expert IT development solutions. From custom software to mobile apps and cloud integrations, we streamline your processes, reducing time-to-market while ensuring quality. Let us handle the technology, so you can focus on growth.</p>
+                <div class="col-md-6 row ">
+                    <div class="col-1 rounded  shadow-box p-4" style="background-color: #413790;)"></div>
+                    <div class="col-10 rounded bg-contrast shadow-box image-background off-left-background  p-4">
+                        <h3 class="">Custom Software Development</h3>
+                        <p class="text-secondary mb-0 ">Tailor-made software and platforms designed around your business model and workflows.</p>
+                        <br>
+                        <ul>
+                            <li>Web & mobile applications</li>
+                            <li>Enterprise platforms and portals</li>
+                            <li>API-first systems</li>
+                            <li>Cloud-native development</li>
+                            <li>High-scale transactional systems</li>
+                            <li>Data-intensive applications</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/done.svg)">
-                        <h3 class="mobile-view" style="margin-left: 13%;">Get things done</h3>
-                        <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Get things done faster with our IT development services. From concept to deployment, we handle all the tech details, allowing you to focus on what matters most. Boost efficiency, reduce costs, and achieve your goals with expert-driven solutions that deliver results.</p>
+                <div class="col-md-6 row">
+                    <div class="col-1 rounded  shadow-box p-4" style="background-color: #ea7f23;)"></div>
+                    <div class="col-10 rounded bg-contrast shadow-box image-background off-left-background  p-4">
+                        <h3 class="">Business Process Automation</h3>
+                        <p class="text-secondary mb-0 ">Streamlining operations by eliminating manual tasks and accelerating throughput.</p>
+                        <br>
+                        <ul>
+                            <li>Web & mobile applications</li>
+                            <li>Enterprise platforms and portals</li>
+                            <li>API-first systems</li>
+                            <li>Cloud-native development</li>
+                            <li>High-scale transactional systems</li>
+                            <li>Data-intensive applications</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/grow.svg)">
-                        <h3 class="mobile-view" style="margin-left: 13%;">Grow your business</h3>
-                        <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Grow your business with our IT development solutions. We provide scalable, future-proof technologies that drive innovation and efficiency. Whether it's optimizing existing systems or building from the ground up, our expertise helps you expand faster and stay ahead.</p>
+                <div class="col-md-6 row">
+                    <div class="col-1 rounded  shadow-box p-4" style="background-color: #0fa2ce;)"></div>
+                    <div class="col-10 rounded bg-contrast shadow-box image-background off-left-background  p-4">
+                        <h3 class="">AI Solutions & Integrations</h3>
+                        <p class="text-secondary mb-0 ">Practical AI that improves decision-making, efficiency and customer experience.</p>
+                        <br>
+                        <ul>
+                            <li>Intelligent data extraction</li>
+                            <li>Predictive decision layers</li>
+                            <li>AI-assisted workflows</li>
+                            <li>Recommendation engines</li>
+                            <li>NLP & document understanding</li>
+                            <li>AI integration into existing software</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="rounded bg-contrast shadow-box image-background off-left-background lift-hover p-4 ps-6 ps-md-9" style="background-image: url(img/lcards/goals.svg)">
-                        <h3 class="mobile-view" style="margin-left: 13%;">Accomplish your goals</h3>
-                        <p class="text-secondary mb-0 mobile-view" style="margin-left: 13%;">Accomplish your goals with our IT development services. We transform your vision into reality with custom-built solutions designed to meet your unique business objectives. From start to finish, our team ensures seamless execution, empowering you to achieve success efficiently.</p>
+                <div class="col-md-6 row">
+                    <div class="col-1 rounded  shadow-box p-4" style="background-color: #db2c28;)"></div>
+                    <div class="col-10 rounded bg-contrast shadow-box image-background off-left-background  p-4">
+                        <h3 class="">Platform Engineering</h3>
+                        <p class="text-secondary mb-0 ">End-to-end development and maintenance of enterprise-grade platforms.</p>
+                        <br>
+                        <ul>
+                            <li>Digital gifting & prepaid card ecosystem</li>
+                            <li>Inventory, WMS & OMS platform</li>
+                            <li>Prepaid, fintech & core extensions</li>
+                            <li>Community, membership & chamber platform</li>
+                            <li>Marine operations and managements</li>
+                            <li>Heavy equipment operations</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -530,7 +732,7 @@
             </div>
         </div>
     </section><!-- ./Lightweight HTML - Big screen right -->
-    <section class="section">
+    <section class="section p-3">
         <div class="container-wide">
             <div class="row gap-y align-items-center text-center text-lg-start">
                 <div class="col-10 col-lg-3 mx-auto">
@@ -540,9 +742,40 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-7 pe-0">
-                    <video controls preload="none" class="img-responsive shadow aos-init aos-animate" poster="img/screens/dash/2.png">
-                        <source src="video/Zoho-ChatBot.mp4"  type="video/mp4">
-                    </video>
+                    <div class="video-container">
+                        <video poster="img/screens/dash/ai_agent.png" preload="none">
+                            <source src="video/Zoho-ChatBot.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <div class="custom-controls">
+                            <div class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+
+                        <div class="controls-bar">
+                            <button class="control-btn play-pause">
+                                <i class="fas fa-play"></i>
+                            </button>
+
+                            <div class="progress-container">
+                                <div class="progress-bar"></div>
+                            </div>
+
+                            <div class="time-display">0:00 / 0:00</div>
+
+                            <div class="volume-control">
+                                <button class="control-btn volume-btn">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                                <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+                            </div>
+
+                            <button class="control-btn fullscreen-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -828,6 +1061,99 @@
         }
 
         window.addEventListener('scroll', checkScroll);
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const videoContainer = document.querySelector('.video-container');
+        const video = videoContainer.querySelector('video');
+        const playBtn = videoContainer.querySelector('.custom-controls .play-btn');
+        const playPauseBtn = videoContainer.querySelector('.controls-bar .play-pause');
+        const progressBar = videoContainer.querySelector('.progress-bar');
+        const progressContainer = videoContainer.querySelector('.progress-container');
+        const timeDisplay = videoContainer.querySelector('.time-display');
+        const volumeBtn = videoContainer.querySelector('.volume-btn');
+        const volumeSlider = videoContainer.querySelector('.volume-slider');
+        const fullscreenBtn = videoContainer.querySelector('.fullscreen-btn');
+
+        // Format time from seconds to MM:SS
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        // Update progress bar and time display
+        function updateProgress() {
+            const percent = (video.currentTime / video.duration) * 100;
+            progressBar.style.width = `${percent}%`;
+            timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+        }
+
+        // Set video progress when clicking on progress bar
+        function setProgress(e) {
+            const width = this.clientWidth;
+            const clickX = e.offsetX;
+            const duration = video.duration;
+
+            video.currentTime = (clickX / width) * duration;
+        }
+
+        // Toggle play/pause
+        function togglePlay() {
+            if (video.paused) {
+                video.play();
+                videoContainer.classList.add('playing');
+                playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                video.pause();
+                videoContainer.classList.remove('playing');
+                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        }
+
+        // Toggle volume mute/unmute
+        function toggleMute() {
+            video.muted = !video.muted;
+            volumeBtn.innerHTML = video.muted ?
+                '<i class="fas fa-volume-mute"></i>' :
+                '<i class="fas fa-volume-up"></i>';
+            volumeSlider.value = video.muted ? 0 : video.volume;
+        }
+
+        // Set volume from slider
+        function setVolume() {
+            video.volume = volumeSlider.value;
+            video.muted = (volumeSlider.value == 0);
+            volumeBtn.innerHTML = (volumeSlider.value == 0) ?
+                '<i class="fas fa-volume-mute"></i>' :
+                '<i class="fas fa-volume-up"></i>';
+        }
+
+        // Toggle fullscreen
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                videoContainer.requestFullscreen().catch(err => {
+                    console.log(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Event listeners
+        playBtn.addEventListener('click', togglePlay);
+        playPauseBtn.addEventListener('click', togglePlay);
+        video.addEventListener('click', togglePlay);
+        video.addEventListener('timeupdate', updateProgress);
+        video.addEventListener('loadedmetadata', updateProgress);
+        progressContainer.addEventListener('click', setProgress);
+        volumeBtn.addEventListener('click', toggleMute);
+        volumeSlider.addEventListener('input', setVolume);
+        fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+        // Initialize volume
+        video.volume = volumeSlider.value;
     });
 </script>
 <!-- endinject -->
