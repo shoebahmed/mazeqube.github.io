@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
 
     <!-- HTML Meta Tags -->
-    <title>MazeQube - Privacy Policy</title>
+    <title>MazeQube - About Us</title>
     <meta name="description" content="MazeQube delivers tailored solutions to boost business efficiency with cloud tech, mobility, and innovative IT services. Partner with us for transformative growth.">
     <meta name="keywords" content="MazeQube, software development, IT solutions, cloud services, mobility solutions, digital transformation, custom software, business technology solutions">
 
@@ -53,6 +53,280 @@
     <link rel="stylesheet" href="css/rtl.css">
     <link rel="stylesheet" href="css/demo.css">
     <!-- endinject -->
+    <style>
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .about-hero {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .about-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .about-content {
+            padding: 60px 40px;
+        }
+
+        .about-intro {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .intro-text {
+            flex: 1;
+        }
+
+        .intro-text h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .intro-text h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 2px;
+        }
+
+        .intro-text p {
+            font-size: 1.125rem;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+
+        .intro-stats {
+            flex: 0 0 300px;
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .stat-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .stat-text h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 4px;
+        }
+
+        .stat-text p {
+            font-size: 0.9rem;
+            color: #718096;
+        }
+
+        .about-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 12px;
+            color: #6a11cb;
+        }
+
+        .section-content {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-content p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+
+        .highlight-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .highlight-list li {
+            padding: 12px 0 12px 40px;
+            position: relative;
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+
+        .highlight-list li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .highlight-list li:nth-child(1):before {
+            content: '1';
+        }
+
+        .highlight-list li:nth-child(2):before {
+            content: '2';
+        }
+
+        .highlight-list li:nth-child(3):before {
+            content: '3';
+        }
+
+        .values-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #6a11cb;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .value-card h3 i {
+            margin-right: 10px;
+            color: #6a11cb;
+        }
+
+        .value-card p {
+            font-size: 1rem;
+            color: #4a5568;
+        }
+
+        .principle-section {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .principle-section h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .principle-section p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 40px 20px;
+            }
+
+            .about-hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .about-content {
+                padding: 40px 20px;
+            }
+
+            .about-intro {
+                flex-direction: column;
+            }
+
+            .intro-stats {
+                width: 100%;
+            }
+
+            .values-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <style>
 
@@ -225,52 +499,98 @@
     <main>
         <header class="page header text-contrast bg-primary">
             <div class="container">
-                <h1 class="bold display-md-4 text-contrast">Cancellation Policy</h1>
+                <h1 class="bold display-md-4 text-contrast">About Us</h1>
             </div>
         </header>
         <section class="section blog single">
-            <div class="container">
-                <div class="row gap-y">
-                    <div class="col-lg-8 b-r">
-                        <div class="blog-post post-content pb-5">
-                            <h2 class="bold">Cancellation and Refund Policy</h2>
-                            <hr class="mb-5">
-                            <p class="lead text-secondary mb-5">At MazeQube, we strive to provide the best service possible. However, we understand that sometimes you may need to cancel a service or request a refund. Please review our policy below.</p>
+            <div class="about-container">
 
-                            <h2 id="cancellation-requests">1. Cancellation Requests</h2>
-                            <p>You may cancel your service at any time by contacting us at info@mazeqube.com. Please include your order details and the reason for cancellation. We will process your request within 5 business days.</p>
+                <div class="about-content">
+                    <div class="about-intro">
+                        <div class="intro-text">
+                            <h2>Our Journey</h2>
+                            <p>MazeQube began its journey in 2016 with a clear ambition: to design and deliver high quality, made-to-measure digital platforms for organisations across the UK, Europe, the United States and Canada.</p>
+                            <p>Our growth has been driven by strong international partnerships, a deep engineering DNA, and a commitment to building technology that enables long-term business performance.</p>
+                        </div>
 
-                            <h2 id="refund-eligibility">2. Refund Eligibility</h2>
-                            <p>Refunds are available for services canceled within 30 days of purchase, provided that the service has not been used. Refunds will be processed to the original payment method within 10 business days.</p>
+                        <div class="intro-stats">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="stat-text">
+                                    <h3>8+ Years</h3>
+                                    <p>Of Excellence</p>
+                                </div>
+                            </div>
 
-                            <h2 id="non-refundable-items">3. Non-Refundable Items</h2>
-                            <p>Certain items are non-refundable, including but not limited to:</p>
-                            <ul>
-                                <li>Services that have already been used.</li>
-                                <li>Custom or personalized services.</li>
-                                <li>Services purchased during a promotional period.</li>
-                            </ul>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-text">
+                                    <h3>Global</h3>
+                                    <p>Team Presence</p>
+                                </div>
+                            </div>
 
-                            <h2 id="late-or-missing-refunds">4. Late or Missing Refunds</h2>
-                            <p>If you have not received your refund within 10 business days, please check your bank account again. If the refund is still missing, contact your bank or credit card company. If the issue persists, contact us at info@mazeqube.com.</p>
-
-                            <h2 id="changes-to-policy">5. Changes to Policy</h2>
-                            <p>We reserve the right to modify this Cancellation Policy at any time. Any changes will be effective immediately upon posting on our website. Your continued use of our services after any changes constitutes your acceptance of the new policy.</p>
-
-                            <h2 id="contact-us">6. Contact Us</h2>
-                            <p>If you have any questions about our Cancellation Policy, please contact us at info@mazeqube.com.</p>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="stat-text">
+                                    <h3>8+ Years</h3>
+                                    <p>Longest Client Partnership</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 sticky-toc">
-                        <h4 class="mt-5 mb-3 bold">In this page</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#cancellation-requests">1. Cancellation Requests</a></li>
-                            <li><a href="#refund-eligibility">2. Refund Eligibility</a></li>
-                            <li><a href="#non-refundable-items">3. Non-Refundable Items</a></li>
-                            <li><a href="#late-or-missing-refunds">4. Late or Missing Refunds</a></li>
-                            <li><a href="#changes-to-policy">5. Changes to Policy</a></li>
-                            <li><a href="#contact-us">6. Contact Us</a></li>
-                        </ul>
+
+                    <div class="about-section">
+                        <h2 class="section-title"><i class="fas fa-lightbulb"></i> Our Global Approach</h2>
+                        <div class="section-content">
+                            <p>As we expanded globally, we encountered a challenge shared by organisations everywhere: a shortage of the right engineering expertise paired with strategic guidance on how to modernise, automate and scale. We responded by developing a hybrid delivery model, with consulting, architecture and client leadership anchored in Europe and the UK, supported by our own development centre in India where engineering excellence is abundant.</p>
+                            <p>Our global delivery structure enables us to serve clients around the world with consistency, speed, and exceptional capability. We maintain our own dedicated support team that ensures round-the-clock, 24×7 assistance for all ongoing engagements. Leveraging our global presence, we operate using a “follow-the-sun” support model, ensuring seamless coverage and minimal downtime for our clients regardless of their location.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-section">
+                        <h2 class="section-title"><i class="fas fa-handshake"></i> Our Commitment</h2>
+                        <div class="section-content">
+                            <p>We believe in working closely with our clients from the very beginning, collaborating to understand their unique requirements, designing tailored solutions, and delivering projects with precision. Our commitment to long term partnerships is evident: our longest running support contract has continued for more than 8 years, reflecting the trust and confidence our clients place in us.</p>
+                            <p>We consistently deliver solutions built on the latest technology stacks. Our Architects and Engineers are proactive, innovative, and always willing to explore emerging technologies to ensure our clients receive modern, future ready solutions. Equally important, we deliver on agreed timelines, maintaining a strong reputation for reliability and accountability.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-section">
+                        <h2 class="section-title"><i class="fas fa-rocket"></i> Client Benefits</h2>
+                        <div class="section-content">
+                            <p>By providing stable, high quality IT services, we enable our clients to focus on their core business operations ultimately helping them improve efficiency, reduce overhead, and drive growth. Our Development Teams, Architects, and Account managers remain accessible and responsive at all times, whether through chat, email, or direct calls.</p>
+                            <p>At the heart of our success is our belief in strong client relationships. We are confident that by consistently delivering value, maintaining transparency, and standing by our commitments, our clients will continue to rely on us as a trusted partner for years to come.</p>
+
+                            <ul class="highlight-list">
+                                <li>No unnecessary layers.</li>
+                                <li>No inflated cost structures.</li>
+                                <li>Just the right expertise, at the right moment, delivered with clarity, precision and accountability.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="values-section">
+                        <div class="value-card">
+                            <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                            <p>To design and deliver high-quality, made-to-measure digital platforms that drive business performance and innovation for organizations worldwide.</p>
+                        </div>
+
+                        <div class="value-card">
+                            <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                            <p>To be the most trusted international partner for organizations seeking AI innovation, business automation, and enterprise-grade software development.</p>
+                        </div>
+
+                        <div class="value-card">
+                            <h3><i class="fas fa-star"></i> Our Values</h3>
+                            <p>Excellence, innovation, accountability, and long-term partnership form the foundation of everything we do at MazeQube.</p>
+                        </div>
                     </div>
                 </div>
             </div>
