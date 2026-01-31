@@ -20487,7 +20487,7 @@ textarea.form-control.form-control-rounded {
   position: relative;
 }
 
-.bg-light.edge.bottom-right::after {
+/*.bg-light.edge.bottom-right::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 100 250' fill='rgb(241,244,248)' fill-opacity='1'%3E%3Cpolygon points='0,0 100,0 0,250'%3E%3C/polygon%3E%3C/svg%3E");
   background-position: center center;
   background-repeat: no-repeat;
@@ -20500,7 +20500,7 @@ textarea.form-control.form-control-rounded {
   width: 100%;
   z-index: 1;
   bottom: -250px;
-}
+}*/
 
 .bg-light.edge.top-left {
   position: relative;
