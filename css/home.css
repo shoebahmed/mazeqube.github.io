@@ -1043,3 +1043,52 @@ video {
         word-break: break-word;
     }
 }
+
+/* ── Footer responsive ───────────────────────────────────────── */
+@media (max-width: 768px) {
+    .site-footer .col-md-4,
+    .site-footer .col-md-2 {
+        text-align: center;
+    }
+
+    .site-footer .nav.flex-column {
+        align-items: center;
+    }
+
+    .site-footer .d-flex.align-items-center {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .site-footer .nav:not(.flex-column) {
+        justify-content: center;
+    }
+
+    .site-footer hr {
+        margin-top: 2rem;
+    }
+
+    .site-footer .row.small.align-items-start {
+        text-align: center;
+    }
+
+    .site-footer .col-md-3,
+    .site-footer .col-md-6 {
+        text-align: center;
+    }
+}
+
+/* ── Blog card grid responsive ───────────────────────────────── */
+@media (max-width: 576px) {
+    .card-blog {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ── blog-post article responsive ───────────────────────────── */
+@media (max-width: 768px) {
+    .blog.single .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
