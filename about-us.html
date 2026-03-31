@@ -330,6 +330,61 @@
                 grid-template-columns: 1fr;
             }
         }
+        @media (max-width: 768px) {
+            .about-content {
+                padding: 30px 16px;
+            }
+
+            .about-intro {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .intro-stats {
+                flex: none !important;
+                width: 100%;
+            }
+
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-hero {
+                padding: 40px 20px;
+            }
+
+            .intro-text h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-section {
+                padding: 20px 16px;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-content {
+                padding: 20px 12px;
+            }
+
+            .stat-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stat-icon {
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+
+            .highlight-list li {
+                font-size: 0.95rem;
+            }
+        }
     </style>
 </head>
 <style>

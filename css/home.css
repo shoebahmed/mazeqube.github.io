@@ -688,3 +688,358 @@ video {
         margin-left: auto;
     }
 }
+/* ============================================================
+   RESPONSIVE FIXES — MazeQube UK SEO update
+   All breakpoints: 576px (xs), 768px (md), 992px (lg)
+   ============================================================ */
+
+/* ── Hero section ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .header.integrations-header .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header.integrations-header h1.home {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    .header.integrations-header .lead {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .header.integrations-header .nav.mt-5 {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 1.5rem !important;
+    }
+
+    .header.integrations-header .nav.mt-5 .nav-link.btn {
+        width: 100%;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+
+    .bubbles-wrap {
+        padding: 20px 16px;
+    }
+
+    .bubbles-container h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* ── CTA "Why wait" section — fix hardcoded margin-left: 41% ─ */
+.shadow.rounded.bg-dark .nav .btn {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+    width: fit-content;
+}
+
+@media (max-width: 768px) {
+    .shadow.rounded.bg-dark .nav .btn {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+/* ── Service cards — What we offer ───────────────────────── */
+@media (max-width: 576px) {
+    .card-content {
+        padding: 14px;
+    }
+
+    .card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-content ul {
+        font-size: 0.92rem;
+    }
+}
+
+/* ── Single testimonial banner ────────────────────────────── */
+@media (max-width: 768px) {
+    .singl-testimonial .col-md-3 {
+        padding: 24px 20px;
+        text-align: center;
+    }
+
+    .singl-testimonial .col-12.col-md-7 {
+        min-height: 200px;
+    }
+}
+
+/* ── AI Agents video section ──────────────────────────────── */
+@media (max-width: 768px) {
+    .video-container {
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+
+    .play-btn {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 16px;
+    }
+
+    .play-btn i {
+        font-size: 22px;
+    }
+
+    .time-display,
+    .custom-video-time-display {
+        font-size: 12px;
+        min-width: 70px;
+    }
+
+    .volume-slider,
+    .custom-video-volume-slider {
+        width: 50px;
+    }
+}
+
+/* ── Custom video (testimonial) ───────────────────────────── */
+@media (max-width: 768px) {
+    .custom-video-container {
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+
+    .custom-video-container video {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .custom-video-play-btn {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 16px;
+    }
+
+    .custom-video-play-btn i {
+        font-size: 22px;
+    }
+}
+
+/* ── container-wide sections ──────────────────────────────── */
+@media (max-width: 992px) {
+    .container-wide {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* ── Enquiry modal — mobile ───────────────────────────────── */
+@media (max-width: 576px) {
+    .enquiry-modal {
+        padding: 1.25rem !important;
+        margin-top: 20px !important;
+        max-height: 92vh !important;
+    }
+
+    .enquiry-modal-header h2 {
+        font-size: 1.4rem !important;
+    }
+}
+
+/* ── Industry / blog-post pages ───────────────────────────── */
+@media (max-width: 768px) {
+    .blog-post .col-md-8 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .blog-post figure img {
+        border-radius: 6px;
+    }
+
+    .page.header .container {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .page.header h1 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+}
+
+/* ── About Us page ────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .about-container {
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .about-content {
+        padding: 30px 20px !important;
+    }
+
+    .about-intro {
+        flex-direction: column !important;
+        gap: 24px !important;
+    }
+
+    .intro-stats {
+        flex: unset !important;
+        width: 100% !important;
+    }
+
+    .stat-item {
+        margin-bottom: 16px !important;
+    }
+
+    .about-section {
+        padding: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .section-title {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* ── Contact page ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .page.header .col-md-6 {
+        padding-bottom: 1rem;
+    }
+
+    #block-card {
+        margin-bottom: 2rem;
+    }
+
+    .col-md-5.ms-md-auto {
+        padding-top: 0.5rem;
+    }
+}
+
+/* ── Partner with us page ─────────────────────────────────── */
+@media (max-width: 768px) {
+    .page.header .lead {
+        font-size: 0.97rem;
+        line-height: 1.6;
+    }
+}
+
+/* ── AI More page ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .highlight-box {
+        padding: 16px !important;
+    }
+
+    .service-card .service-icon {
+        margin-bottom: 12px;
+    }
+}
+
+/* ── Navigation — mobile dropdown spacing ─────────────────── */
+@media (max-width: 768px) {
+    #header-industries-mobile a {
+        display: block;
+        padding: 6px 0;
+        font-size: 0.95rem;
+    }
+
+    .st-dropdown-content-group h4 {
+        margin-top: 1rem;
+    }
+}
+
+/* ── General utility — prevent horizontal overflow ────────── */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    h2.bold {
+        font-size: 1.6rem;
+    }
+
+    .display-4 {
+        font-size: 2.2rem;
+    }
+}
+
+/* ── Fix hardcoded inline margin-left: 41% on CTA buttons ─── */
+a[style*="margin-left: 41%"],
+a[style*="margin-left:41%"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    width: fit-content !important;
+}
+
+/* ── CTA centre buttons (replaces hardcoded margin-left:41%) ─ */
+.cta-center {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 576px) {
+    .cta-center {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+/* ── video global fix — prevent overflow on mobile ──────────── */
+video {
+    max-width: 100%;
+}
+
+.custom-video-container video {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+
+/* ── section padding tighten on small screens ────────────────── */
+@media (max-width: 576px) {
+    .section.p-3 {
+        padding: 1rem !important;
+    }
+
+    .section.mt-2 {
+        margin-top: 0.5rem !important;
+    }
+
+    .shadow.rounded.bg-dark.p-5 {
+        padding: 1.5rem !important;
+    }
+
+    .shadow.rounded.bg-dark .handwritten {
+        font-size: 1.2rem;
+    }
+}
+
+/* ── industries page header H1 mobile ───────────────────────── */
+@media (max-width: 480px) {
+    .page.header h1.font-md {
+        font-size: 1.35rem;
+        word-break: break-word;
+    }
+}

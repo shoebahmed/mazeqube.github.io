@@ -339,6 +339,48 @@
                 padding: 30px 20px;
             }
         }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .highlight-box {
+                padding: 16px 14px !important;
+                font-size: 0.97rem;
+            }
+
+            .content-block {
+                padding: 0 4px;
+            }
+
+            .faq-section {
+                padding: 16px !important;
+                margin: 20px 0 !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-card {
+                padding: 16px !important;
+            }
+
+            .service-icon {
+                width: 44px !important;
+                height: 44px !important;
+            }
+
+            .benefit-item {
+                flex-direction: column;
+                align-items: flex-start !important;
+                gap: 8px !important;
+            }
+        }
     </style>
 </head>
 <style>
