@@ -36,24 +36,24 @@
 
     <!-- Schema: Organization -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "MazeQube",
-      "url": "https://mazeqube.com",
-      "logo": "https://mazeqube.com/img/MazeQube_Logo_Icon_Color_45mm.png",
-      "foundingDate": "2016",
-      "description": "Custom software development, AI solutions and business process automation for UK and European B2B, fintech, logistics and public sector clients.",
-      "areaServed": ["GB", "DE", "NL", "FR", "IE", "SE", "NO", "DK", "BE"],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "sales",
-        "url": "https://mazeqube.com/contact.html",
-        "areaServed": "GB",
-        "availableLanguage": "English"
-      },
-      "sameAs": []
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "MazeQube",
+            "url": "https://mazeqube.com",
+            "logo": "https://mazeqube.com/img/MazeQube_Logo_Icon_Color_45mm.png",
+            "foundingDate": "2016",
+            "description": "Custom software development, AI solutions and business process automation for UK and European B2B, fintech, logistics and public sector clients.",
+            "areaServed": ["GB", "DE", "NL", "FR", "IE", "SE", "NO", "DK", "BE"],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "sales",
+                "url": "https://mazeqube.com/contact.html",
+                "areaServed": "GB",
+                "availableLanguage": "English"
+            },
+            "sameAs": []
+        }
     </script>
 
     <meta name="google-site-verification" content="xfhBtkaZzBpyMAG43KNsktDmVBEIGGeQkUJ7BOWWAeU" />
@@ -109,19 +109,25 @@
         <ul class="st-nav-menu nav navbar-nav">
             <li class="st-nav-section nav-item">
                 <a href="https://mazeqube.com/#main" class="navbar-brand">
-                    <img src="img/MazeQube_Logo_Icon_Color_45mm.png" alt="MazeQube" class="logo logo-sticky d-inline-block d-md-none first-logo">
-                    <img src="img/MazeQube_Logo_Icon_White_45mm.png" alt="MazeQube" class="logo logo-sticky d-inline-block second-logo">
-                    <img src="img/mazeqube-black-font-mobile.png" alt="MazeQube" class="logo-sticky d-inline-block d-md-none third-logo">
+                    <!-- First Logo -->
+                    <img src="img/MazeQube_Logo_Icon_Color_45mm.png" alt="MazeQubeLogo" class="logo logo-sticky d-inline-block d-md-none first-logo">
+
+                    <!-- Second Logo (hide on mobile) -->
+                    <img src="img/MazeQube_Logo_Icon_White_45mm.png" alt="MazeQubeLogo" class="logo logo-sticky d-inline-block second-logo">
+
+                    <!-- Third Logo (show mobile only) -->
+                    <img src="img/mazeqube-black-font-mobile.png" alt="MazeQubeLogo" class="logo-sticky d-inline-block d-md-none third-logo">
                 </a>
             </li>
             <li class="st-nav-section st-nav-primary nav-item">
                 <a class="st-root-link nav-link" href="https://mazeqube.com/">Home</a>
-                <a class="st-root-link nav-link" href="/blog.html">Business Solutions</a>
+                <a class="st-root-link nav-link" href="/blog">Business Solutions</a>
                 <a class="st-root-link item-company st-has-dropdown nav-link active" data-dropdown="industries" href="">Industries</a>
                 <a class="st-root-link nav-link" href="/partner-with-us.html">Partner with us</a>
                 <a class="st-root-link nav-link" href="/contact.html">Contact us</a>
                 <a class="st-root-link nav-link" href="/event.html">Events</a>
             </li>
+            <!-- Mobile Navigation -->
             <li class="st-nav-section st-nav-mobile nav-item">
                 <button class="st-root-link navbar-toggler" type="button" aria-expanded="false" aria-controls="navbarMenu" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
@@ -135,35 +141,34 @@
                             <h4 class="text-uppercase regular">Pages</h4>
                             <a class="regular text-primary" href="/blog"><i class="far fa-building me-2"></i> Business Solutions</a>
                             <a class="regular text-success" href="/partner-with-us.html"><i class="far fa-envelope me-2"></i> Partner with Us</a>
+                            <!--                                <a class="regular text-warning" href="pricing.html"><i class="fas fa-hand-holding-usd me-2"></i> Pricing</a>-->
                             <a class="regular text-info" href="/contact.html"><i class="far fa-envelope me-2"></i> Contact Us</a>
                             <a class="regular text-info" href="/event.html"><i class="far fa-calendar-alt me-2"></i> Events</a>
-                        </div>
-                        <div class="st-dropdown-content-group border-top bw-2">
-                            <h4 class="text-uppercase regular">Services</h4>
-                            <div class="row">
-                                <div id="header-services-mobile" class="col me-4">
-                                    <a href="/services/custom-software-development.html">Custom Software Development</a>
-                                    <a href="/services/business-process-automation.html">Business Process Automation</a>
-                                    <a href="/services/ai-solutions.html">AI Solutions &amp; Integrations</a>
-                                    <a href="/services/ai-agents.html">AI Agents</a>
-                                    <a href="/services/platform-engineering.html">Platform Engineering</a>
-                                    <a href="/services/it-consulting.html">IT Consulting</a>
-                                </div>
-                            </div>
                         </div>
                         <div class="st-dropdown-content-group border-top bw-2">
                             <h4 class="text-uppercase regular">Industries</h4>
                             <div class="row">
                                 <div id="header-industries-mobile" class="col me-4">
-                                    <a href="/industries-first.html">B2B and Retail</a>
-                                    <a href="/industries-second.html">Public Sector &amp; Government</a>
-                                    <a href="/industries-third.html">Supply Chain &amp; Logistics</a>
-                                    <a href="/industries-fintech.html">Fintech &amp; Financial Services</a>
-                                    <a href="/industries-maritime.html">Maritime &amp; Marine Operations</a>
-                                    <a href="/industries-construction.html">Construction &amp; Heavy Operations</a>
+                                    <a target="_blank" href="/industries-first.html">B2B and Retail</a>
+                                    <a target="_blank" href="/industries-second.html">Public Sector & Government</a>
+                                    <a target="_blank" href="/industries-third.html">Supply Chain & Logistics</a>
+                                    <a target="_blank" href="/industries-fintech.html">Fintech &amp; Financial Services</a>
+                                    <a target="_blank" href="/industries-maritime.html">Maritime &amp; Marine Operations</a>
+                                    <a target="_blank" href="/industries-construction.html">Construction &amp; Heavy Operations</a>
                                 </div>
+                                <!--<div class="col me-4">
+                                    <a target="_blank" href="components/overlay.html">Overlay</a>
+                                    <a target="_blank" href="components/progress.html">Progress</a>
+                                    <a target="_blank" href="components/lightbox.html">Lightbox</a>
+                                    <a target="_blank" href="components/tab.html">Tabs</a>
+                                    <a target="_blank" href="components/tables.html">Tables</a>
+                                    <a target="_blank" href="components/typography.html">Typography</a>
+                                </div>-->
                             </div>
                         </div>
+                        <!--<div class="st-dropdown-content-group bg-light b-t">
+                            <a href="login.html">Sign in <i class="fas fa-arrow-right"></i></a>
+                        </div>-->
                     </div>
                 </div>
             </li>
@@ -175,120 +180,66 @@
         </div>
         <div class="st-dropdown-arrow"></div>
         <div class="st-dropdown-container">
-            <div id="header-services" class="st-dropdown-section" data-dropdown="services">
-                <div class="st-dropdown-content">
-                    <div class="st-dropdown-content-group">
-                        <a class="dropdown-item" href="/services/custom-software-development.html">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-code"></i></div>
-                                <div class="flex-fill">
-                                    <h3 class="link-title m-0">Custom Software Development</h3>
-                                    <p class="m-0 small text-secondary">Bespoke web, mobile and enterprise platforms</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item" href="/services/business-process-automation.html">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-warning text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-cogs"></i></div>
-                                <div class="flex-fill">
-                                    <h3 class="link-title m-0">Business Process Automation</h3>
-                                    <p class="m-0 small text-secondary">Workflow automation and RPA solutions</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item" href="/services/ai-solutions.html">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-brain"></i></div>
-                                <div class="flex-fill">
-                                    <h3 class="link-title m-0">AI Solutions &amp; Integrations</h3>
-                                    <p class="m-0 small text-secondary">Practical AI for UK and European businesses</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item" href="/services/ai-agents.html">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-success text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-robot"></i></div>
-                                <div class="flex-fill">
-                                    <h3 class="link-title m-0">AI Agents</h3>
-                                    <p class="m-0 small text-secondary">Intelligent agents for business automation</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item" href="/services/platform-engineering.html">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-dark text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-layer-group"></i></div>
-                                <div class="flex-fill">
-                                    <h3 class="link-title m-0">Platform Engineering</h3>
-                                    <p class="m-0 small text-secondary">Enterprise-grade platform development</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item" href="/services/it-consulting.html">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-secondary text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-chart-line"></i></div>
-                                <div class="flex-fill">
-                                    <h3 class="link-title m-0">IT Consulting</h3>
-                                    <p class="m-0 small text-secondary">Digital transformation consultancy UK</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
             <div id="header-industries" class="st-dropdown-section" data-dropdown="industries">
                 <div class="st-dropdown-content">
                     <div class="st-dropdown-content-group">
-                        <a class="dropdown-item" href="/industries-first.html">
+                        <a class="dropdown-item" href="https://mazeqube.com/industries-first">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-dark text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-credit-card"></i></div>
                                 <div class="flex-fill">
                                     <h3 class="link-title m-0">B2B and Retail</h3>
-                                    <p class="m-0 small text-secondary">Modern digital platforms for UK B2B and retail</p>
+                                    <p class="m-0 small text-secondary">Modern digital platforms and tailored </p>
+                                    <p class="m-0 small text-secondary">software solutions that streamline operations</p>
                                 </div>
                             </div>
                         </a>
-                        <a class="dropdown-item" href="/industries-second.html">
+                        <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-second">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-secondary text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-users"></i></div>
                                 <div class="flex-fill">
-                                    <h3 class="link-title m-0">Public Sector &amp; Government</h3>
-                                    <p class="m-0 text-secondary small">Software for UK and European government organisations</p>
+                                    <h3 class="link-title m-0">Public Sector & Government</h3>
+                                    <p class="m-0 text-secondary small">Software that strengthen service delivery, improve stakeholder</p>
+                                    <p class="m-0 text-secondary small"> engagement, and support regional economic development.</p>
                                 </div>
                             </div>
                         </a>
-                        <a class="dropdown-item" href="/industries-third.html">
+                        <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-third">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-success text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-box"></i></div>
                                 <div class="flex-fill">
-                                    <h3 class="link-title m-0">Supply Chain &amp; Logistics</h3>
-                                    <p class="m-0 text-secondary small">Optimise warehouse operations and fulfilment</p>
+                                    <h3 class="link-title m-0">Supply Chain & Logistics</h3>
+                                    <p class="m-0 text-secondary small">Solutions that optimise warehouse operations,</p>
+                                    <p class="m-0 text-secondary small">inventory accuracy, and end-to-end fulfilment performance.</p>
                                 </div>
                             </div>
                         </a>
-                        <a class="dropdown-item" href="/industries-fintech.html">
+                        <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-fintech.html">
                             <div class="d-flex align-items-center mb-4">
                                 <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-dollar-sign"></i></div>
                                 <div class="flex-fill">
                                     <h3 class="link-title m-0">Fintech &amp; Financial Services</h3>
-                                    <p class="m-0 text-secondary small">Secure, FCA-aware and GDPR-compliant fintech software</p>
+                                    <p class="m-0 text-secondary small">Secure, compliant and scalable systems engineered for high-volume</p>
+                                    <p class="m-0 text-secondary small">financial operations and digital banking experiences.</p>
                                 </div>
                             </div>
                         </a>
-                        <a class="dropdown-item" href="/industries-maritime.html">
+                        <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-maritime.html">
                             <div class="d-flex align-items-center mb-4">
                                 <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-ship"></i></div>
                                 <div class="flex-fill">
                                     <h3 class="link-title m-0">Maritime &amp; Marine Operations</h3>
-                                    <p class="m-0 text-secondary small">Port, marina and vessel management software</p>
+                                    <p class="m-0 text-secondary small">Software that enhances port workflows, marina management,</p>
+                                    <p class="m-0 text-secondary small">customer services, and vessel administration.</p>
                                 </div>
                             </div>
                         </a>
-                        <a class="dropdown-item" href="/industries-construction.html">
+                        <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-construction.html">
                             <div class="d-flex align-items-center mb-4">
-                                <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-hard-hat"></i></div>
+                                <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-globe"></i></div>
                                 <div class="flex-fill">
                                     <h3 class="link-title m-0">Construction &amp; Heavy Operations</h3>
-                                    <p class="m-0 text-secondary small">Field-ready software for UK construction businesses</p>
+                                    <p class="m-0 text-secondary small">Practical, field-ready digital solutions designed to improve planning,</p>
+                                    <p class="m-0 text-secondary small"> operational efficiency and equipment management.</p>
                                 </div>
                             </div>
                         </a>
@@ -312,8 +263,8 @@
                     <p class="lead">Custom Software Development &amp; Business Automation for UK and European Companies &mdash; supporting businesses 24/7 for over 10 years</p>
                     <p class="handwritten font-md highlight px-4">Connect with us</p>
                     <nav class="nav mt-5">
-                        <a href="contact.html" class="nav-link me-3 btn btn-rounded btn-success text-contrast enquire mb-2">Enquire </a>
-                        <a href="https://tidycal.com/mazeqube/30" target="_blank" class="nav-link me-3 btn btn-rounded btn-info text-contrast enquire mb-2">Book Meeting </a>
+                        <a href="contact.html" class="nav-link me-3 btn btn-rounded btn-success text-contrast enquire">Enquire </a>
+                        <a href="https://tidycal.com/mazeqube/30" target="_blank" class="nav-link me-3 btn btn-rounded btn-info text-contrast enquire">Book Meeting </a>
                     </nav>
                 </div>
             </div>
@@ -511,7 +462,7 @@
     <section class="section p-3">
         <div class="container-wide">
             <div class="row gap-y align-items-center text-center text-lg-start">
-                <div class="col-12 col-lg-3 mx-auto px-3">
+                <div class="col-10 col-lg-3 mx-auto">
                     <div class="mb-5">
                         <h2>AI Agents</h2>
                         <p class="lead text-secondary">We create intelligent agents capable of performing business tasks, supporting your team, answering customer queries, and automating operational workflows. These agents can work around the clock and adapt to your business rules.
@@ -520,7 +471,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-lg-7 px-3">
+                <div class="col-12 col-lg-7 pe-0">
                     <div class="video-container">
                         <video poster="img/screens/dash/ai_agent.png" preload="none">
                             <source src="video/Zoho-ChatBot.mp4" type="video/mp4">
@@ -563,14 +514,14 @@
     <section class="section">
         <div class="container-wide bring-to-front">
             <div class="row gap-y align-items-center text-center text-lg-start">
-                <div class="col-12 col-lg-4 mx-auto order-md-2 px-3">
+                <div class="col-10 col-lg-4 mx-auto order-md-2">
                     <div class="mb-5">
                         <h2>Crafted Software Solutions for Your Unique Business Needs</h2>
                         <p class="lead text-secondary">We build custom software for accountancy firms to generate invoices and manage client billing, deliver solutions for public sector clients to handle community engagement and information management, and configure data pipelines to help organisations pull data and run analytics for increased revenue.</p>
                     </div>
                     <p class="lead text-secondary">Our clients have been serving their customers for 15 to 30 years. We provide 24/7 monitoring of all our applications with automated tools. With our team present across the globe, we offer continuous support throughout the day — GDPR-compliant by design.</p><a href="#" class="btn btn-info text-contrast btn-rounded mt-4">Learn More</a>
                 </div>
-                <div class="col-12 col-lg-6 order-md-1 px-3 mb-4 mb-lg-0"><img src="img/screens/dash/1.png" alt="" class="img-responsive shadow" data-aos="fade-right"></div>
+                <div class="col-12 col-lg-6 ps-0 order-md-1"><img src="img/screens/dash/1.png" alt="" class="img-responsive shadow" data-aos="fade-right"></div>
             </div>
         </div>
     </section><!-- ./Lightweight HTML - Big screen right -->
@@ -613,7 +564,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3 mx-auto px-3">
+                <div class="col-10 col-lg-3 mx-auto">
                     <div class="mb-5">
                         <h2>Testimonial</h2>
                         <p class="lead text-secondary">Here’s what our clients have to say about our work and the experiences they’ve had partnering with us. Their feedback reflects our commitment to quality, trust, and delivering results that truly make a difference.
@@ -672,10 +623,10 @@
                 <div class="text-contrast">
                     <p class="handwritten font-md highlight px-4" style="margin-block: -2%;">Why wait? Connect now!</p>
                     <nav class="nav mt-5">
-                        <a href="contact.html" class="nav-link me-3 btn btn-rounded btn-success text-contrast mb-2 cta-center">Enquire </a>
+                        <a href="contact.html" class="nav-link me-3 btn btn-rounded btn-success text-contrast mb-2" style="margin-left: 41%;">Enquire </a>
                     </nav>
                     <nav class="nav mt-1">
-                        <a href="https://tidycal.com/mazeqube/30" target="_blank" class="nav-link me-3 btn btn-rounded btn-info text-contrast enquire cta-center">Book Meeting </a>
+                        <a href="https://tidycal.com/mazeqube/30" target="_blank" class="nav-link me-3 btn btn-rounded btn-info text-contrast enquire" style="margin-left: 41%;">Book Meeting </a>
                     </nav>
                 </div>
             </div>
@@ -704,48 +655,48 @@
     <div class="enquiry-modal">
 
         <form id="enquiryForm">
-                <div id="block-card">
-                    <div class="card-body">
-                        <div class="enquiry-modal-header">
-                            <h2>Get In Touch</h2>
-                            <button class="enquiry-close-btn" id="closeModalBtn">&times;</button>
-                        </div>
-                        <form id="custom-form" class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up" novalidate="novalidate">
-                            <div class="mb-4">
-                                <label for="firstname" class="fw-bold mb-0">First Name</label>
-                                <input type="text" name="firstname" placeholder="First Name" class="form-control" id="firstname" required="">
-                                <div class="invalid-feedback"></div>
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="fw-bold mb-0">Email address</label>
-                                <div id="emailHelp" class="small form-text text-muted mt-0 mb-2 fst-italic">We'll never share your email with anyone else.</div>
-                                <input type="email" name="email" placeholder="Valid Email" class="form-control" id="email" required="">
-                                <div class="invalid-feedback"></div>
-                            </div>
-                            <div class="mb-4">
-                                <label for="name" class="fw-bold mb-0">Company Name</label>
-                                <input type="name" name="name" placeholder="Company Name" class="form-control" id="name" required="">
-                                <div class="invalid-feedback"></div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="fw-bold" for="message">Message</label>
-                                <textarea name="message" placeholder="What do you want to let us know?" class="form-control" id="message" rows="3" required=""></textarea>
-                                <div class="invalid-feedback"></div>
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button class="btn btn-primary shadow-primary" id="submitButton" type="submit" data-loading-text="Sending...">
-                                    <span class="spinner spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
-                                    <span class="text">Send Message</span>
-                                </button>
-                            </div>
-                        </form>
+            <div id="block-card">
+                <div class="card-body">
+                    <div class="enquiry-modal-header">
+                        <h2>Get In Touch</h2>
+                        <button class="enquiry-close-btn" id="closeModalBtn">&times;</button>
                     </div>
+                    <form id="custom-form" class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up" novalidate="novalidate">
+                        <div class="mb-4">
+                            <label for="firstname" class="fw-bold mb-0">First Name</label>
+                            <input type="text" name="firstname" placeholder="First Name" class="form-control" id="firstname" required="">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="fw-bold mb-0">Email address</label>
+                            <div id="emailHelp" class="small form-text text-muted mt-0 mb-2 fst-italic">We'll never share your email with anyone else.</div>
+                            <input type="email" name="email" placeholder="Valid Email" class="form-control" id="email" required="">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="name" class="fw-bold mb-0">Company Name</label>
+                            <input type="name" name="name" placeholder="Company Name" class="form-control" id="name" required="">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="fw-bold" for="message">Message</label>
+                            <textarea name="message" placeholder="What do you want to let us know?" class="form-control" id="message" rows="3" required=""></textarea>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary shadow-primary" id="submitButton" type="submit" data-loading-text="Sending...">
+                                <span class="spinner spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                <span class="text">Send Message</span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="response-message" style="display: none;">
-                    <i class="fas fa-envelope fa-2x"></i>
-                    <p class="fs-3 mb-3">Thank you for contacting us!!</p>
-                    <p class="fw-bold message">We have your message.</p>
-                </div>
+            </div>
+            <div class="response-message" style="display: none;">
+                <i class="fas fa-envelope fa-2x"></i>
+                <p class="fs-3 mb-3">Thank you for contacting us!!</p>
+                <p class="fw-bold message">We have your message.</p>
+            </div>
         </form>
     </div>
 </div>

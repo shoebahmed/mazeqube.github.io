@@ -9,6 +9,7 @@
 - **Design:** Keep UI CSS same we are using bootstrap 5 framework
 - **Videos:** Keep videos links i have deleted videos save bandwidth the folder name is video
 - **Images:** Keep images links i have deleted images save bandwidth the folder name is img
+- **Page links style:** Modify page links from /blog.html to /blog
 ---
 
 ## Geographic Targeting Strategy
@@ -50,19 +51,19 @@ Add to every page `<head>` to signal UK/Europe targeting to Google:
 ├── industries-second.html        # Public Sector & Government
 ├── industries-third.html         # Supply Chain & Logistics
 ├── industries-four.html          # BROKEN — currently shared by Fintech, Maritime, Construction
-├── industries-fintech.html       # ✓ CREATED
-├── industries-maritime.html      # ✓ CREATED
-├── industries-construction.html  # ✓ CREATED
+├── industries-fintech.html       # TO CREATE
+├── industries-maritime.html      # TO CREATE
+├── industries-construction.html  # TO CREATE
 ├── services/
-│   ├── custom-software-development.html   # ✓ CREATED
-│   ├── business-process-automation.html   # ✓ CREATED
-│   ├── ai-solutions.html                  # ✓ CREATED
-│   ├── platform-engineering.html          # ✓ CREATED
-│   ├── it-consulting.html                 # ✓ CREATED
-│   └── ai-agents.html                     # ✓ CREATED
-├── privacy-policy.html           # ✓ EXISTS
-├── sitemap.xml                   # ✓ UPDATED
-├── robots.txt                    # ✓ UPDATED
+│   ├── custom-software-development.html   # TO CREATE
+│   ├── business-process-automation.html   # TO CREATE
+│   ├── ai-solutions.html                  # TO CREATE
+│   ├── platform-engineering.html          # TO CREATE
+│   ├── it-consulting.html                 # TO CREATE
+│   └── ai-agents.html                     # TO CREATE
+├── privacy-policy.html           # TO CREATE (required for UK/EU GDPR)
+├── sitemap.xml                   # TO CREATE
+├── robots.txt                    # TO CREATE/UPDATE
 ├── css/
 ├── js/
 └── img/
