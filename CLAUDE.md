@@ -50,19 +50,19 @@ Add to every page `<head>` to signal UK/Europe targeting to Google:
 ├── industries-second.html        # Public Sector & Government
 ├── industries-third.html         # Supply Chain & Logistics
 ├── industries-four.html          # BROKEN — currently shared by Fintech, Maritime, Construction
-├── industries-fintech.html       # TO CREATE
-├── industries-maritime.html      # TO CREATE
-├── industries-construction.html  # TO CREATE
+├── industries-fintech.html       # ✓ CREATED
+├── industries-maritime.html      # ✓ CREATED
+├── industries-construction.html  # ✓ CREATED
 ├── services/
-│   ├── custom-software-development.html   # TO CREATE
-│   ├── business-process-automation.html   # TO CREATE
-│   ├── ai-solutions.html                  # TO CREATE
-│   ├── platform-engineering.html          # TO CREATE
-│   ├── it-consulting.html                 # TO CREATE
-│   └── ai-agents.html                     # TO CREATE
-├── privacy-policy.html           # TO CREATE (required for UK/EU GDPR)
-├── sitemap.xml                   # TO CREATE
-├── robots.txt                    # TO CREATE/UPDATE
+│   ├── custom-software-development.html   # ✓ CREATED
+│   ├── business-process-automation.html   # ✓ CREATED
+│   ├── ai-solutions.html                  # ✓ CREATED
+│   ├── platform-engineering.html          # ✓ CREATED
+│   ├── it-consulting.html                 # ✓ CREATED
+│   └── ai-agents.html                     # ✓ CREATED
+├── privacy-policy.html           # ✓ EXISTS
+├── sitemap.xml                   # ✓ UPDATED
+├── robots.txt                    # ✓ UPDATED
 ├── css/
 ├── js/
 └── img/
