@@ -10,6 +10,7 @@
 - **Videos:** Keep videos links i have deleted videos save bandwidth the folder name is video
 - **Images:** Keep images links i have deleted images save bandwidth the folder name is img
 - **Page links style:** Modify page links from /blog.html to /blog
+- **Keep style and css:** Keep style same for both desktop and mobile
 ---
 
 ## Geographic Targeting Strategy

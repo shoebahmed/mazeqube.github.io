@@ -1,55 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://mazeqube.com/</loc>
-  <lastmod>2024-09-07T07:58:08+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://mazeqube.com/blog-grid</loc>
-  <lastmod>2024-09-26T11:54:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://mazeqube.com/partner-with-us</loc>
-  <lastmod>2024-09-26T11:54:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://mazeqube.com/contact</loc>
-  <lastmod>2024-09-26T11:54:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://mazeqube.com/industries-first</loc>
-  <lastmod>2024-09-26T11:54:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://mazeqube.com/industries-second</loc>
-  <lastmod>2024-09-26T11:54:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://mazeqube.com/industries-third</loc>
-  <lastmod>2024-09-26T11:54:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://mazeqube.com/industries-four</loc>
-  <lastmod>2024-09-26T11:54:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://mazeqube.com/event</loc>
-  <lastmod>2024-09-26T11:54:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://mazeqube.com/</loc><lastmod>2026-04-04</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/"/></url>
+  <url><loc>https://mazeqube.com/services/custom-software-development</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/services/custom-software-development"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/services/custom-software-development"/></url>
+  <url><loc>https://mazeqube.com/services/business-process-automation</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/services/business-process-automation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/services/business-process-automation"/></url>
+  <url><loc>https://mazeqube.com/services/ai-solutions</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/services/ai-solutions"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/services/ai-solutions"/></url>
+  <url><loc>https://mazeqube.com/services/ai-agents</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/services/ai-agents"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/services/ai-agents"/></url>
+  <url><loc>https://mazeqube.com/services/platform-engineering</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/services/platform-engineering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/services/platform-engineering"/></url>
+  <url><loc>https://mazeqube.com/services/it-consulting</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/services/it-consulting"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/services/it-consulting"/></url>
+  <url><loc>https://mazeqube.com/industries-first</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/industries-first"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/industries-first"/></url>
+  <url><loc>https://mazeqube.com/industries-second</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/industries-second"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/industries-second"/></url>
+  <url><loc>https://mazeqube.com/industries-third</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/industries-third"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/industries-third"/></url>
+  <url><loc>https://mazeqube.com/industries-fintech</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/industries-fintech"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/industries-fintech"/></url>
+  <url><loc>https://mazeqube.com/industries-maritime</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/industries-maritime"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/industries-maritime"/></url>
+  <url><loc>https://mazeqube.com/industries-construction</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://mazeqube.com/industries-construction"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mazeqube.com/industries-construction"/></url>
+  <url><loc>https://mazeqube.com/about-us</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mazeqube.com/contact</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mazeqube.com/partner-with-us</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mazeqube.com/ai-more</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mazeqube.com/blog</loc><lastmod>2026-04-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mazeqube.com/event</loc><lastmod>2026-04-04</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mazeqube.com/privacy-policy</loc><lastmod>2026-04-04</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

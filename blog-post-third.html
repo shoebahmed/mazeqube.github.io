@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="css/dashcore.css">
     <link rel="stylesheet" href="css/rtl.css">
     <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/home.css?ver=1">
     <!-- endinject -->
 </head>
 <body>
@@ -72,150 +73,200 @@
 <!--End of Tawk.to Script-->
 <!-- ./Making stripe menu navigation -->
     <nav id="header-handle" class="st-nav navbar main-nav navigation fixed-top no-dropdown-transition">
-        <div id="header-placeholder" class="container">
-            <ul class="st-nav-menu nav navbar-nav">
-                <li class="st-nav-section nav-item">
-                    <a href="https://mazeqube.com/#main" class="navbar-brand">
-                        <!-- First Logo -->
-                        <img src="img/MazeQube_Logo_Icon_Color_45mm.png" alt="MazeQubeLogo" class="logo logo-sticky d-inline-block d-md-none first-logo">
-
-                        <!-- Second Logo (hide on mobile) -->
-                        <img src="img/MazeQube_Logo_Icon_White_45mm.png" alt="MazeQubeLogo" class="logo logo-sticky d-inline-block second-logo">
-
-                        <!-- Third Logo (show mobile only) -->
-                        <img src="img/mazeqube-black-font-mobile.png" alt="MazeQubeLogo" class="logo-sticky d-inline-block d-md-none third-logo">
-                    </a>
-                </li>
-                <li class="st-nav-section st-nav-primary nav-item">
-                    <a class="st-root-link nav-link" href="https://mazeqube.com/">Home</a>
-                    <a class="st-root-link nav-link" href="/blog-grid.html">Business Solutions</a>
-                    <a class="st-root-link item-company st-has-dropdown nav-link active" data-dropdown="industries" href="">Industries</a>
-                    <a class="st-root-link nav-link" href="/partner-with-us.html">Partner with us</a>
-                    <a class="st-root-link nav-link" href="/contact.html">Contact us</a>
-                    <a class="st-root-link nav-link" href="/event.html">Events</a>
-                </li>
-                <!-- Mobile Navigation -->
-                <li class="st-nav-section st-nav-mobile nav-item">
-                    <button class="st-root-link navbar-toggler" type="button" aria-expanded="false" aria-controls="navbarMenu" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="st-popup" id="navbarMenu">
-                        <div class="st-popup-container">
-                            <a class="st-popup-close-button">Close</a>
-                            <div id="header-placeholder-mobile" class="st-dropdown-content-group">
-                                <h4 class="text-uppercase regular">Pages</h4>
-                                <a class="regular text-primary" href="/blog-grid.html"><i class="far fa-building me-2"></i> Business Solutions</a>
-                                <a class="regular text-success" href="/partner-with-us.html"><i class="far fa-envelope me-2"></i> Partner with Us</a>
-                                <!--                                <a class="regular text-warning" href="pricing.html"><i class="fas fa-hand-holding-usd me-2"></i> Pricing</a>-->
-                                <a class="regular text-info" href="/contact.html"><i class="far fa-envelope me-2"></i> Contact Us</a>
-                                <a class="regular text-info" href="/event.html"><i class="far fa-calendar-alt me-2"></i> Events</a>
-                            </div>
-                            <div class="st-dropdown-content-group border-top bw-2">
-                                <h4 class="text-uppercase regular">Industries</h4>
-                                <div class="row">
-                                    <div id="header-industries-mobile" class="col me-4">
-                                    <a target="_blank" href="/industries-first.html">B2B and Retail</a>
-                                    <a target="_blank" href="/industries-second.html">Public Sector & Government</a>
-                                    <a target="_blank" href="/industries-third.html">Supply Chain & Logistics</a>
-                                    <a target="_blank" href="/industries-four.html">Fintech & Financial Services</a>
-                                    <a target="_blank" href="/industries-four.html">Maritime & Marine Operations</a>
-                                    <a target="_blank" href="/industries-four.html">Construction & Heavy Operations</a>
-                                </div>
-                                    <!--<div class="col me-4">
-                                        <a target="_blank" href="components/overlay.html">Overlay</a>
-                                        <a target="_blank" href="components/progress.html">Progress</a>
-                                        <a target="_blank" href="components/lightbox.html">Lightbox</a>
-                                        <a target="_blank" href="components/tab.html">Tabs</a>
-                                        <a target="_blank" href="components/tables.html">Tables</a>
-                                        <a target="_blank" href="components/typography.html">Typography</a>
-                                    </div>-->
+    <div id="header-placeholder" class="container">
+        <ul class="st-nav-menu nav navbar-nav">
+            <li class="st-nav-section nav-item">
+                <a href="https://mazeqube.com/#main" class="navbar-brand">
+                    <img src="img/MazeQube_Logo_Icon_Color_45mm.png" alt="MazeQube" class="logo logo-sticky d-inline-block d-md-none first-logo">
+                    <img src="img/MazeQube_Logo_Icon_White_45mm.png" alt="MazeQube" class="logo logo-sticky d-inline-block second-logo">
+                    <img src="img/mazeqube-black-font-mobile.png" alt="MazeQube" class="logo-sticky d-inline-block d-md-none third-logo">
+                </a>
+            </li>
+            <li class="st-nav-section st-nav-primary nav-item">
+                <a class="st-root-link nav-link" href="https://mazeqube.com/">Home</a>
+                <a class="st-root-link nav-link" href="/blog">Business Solutions</a>
+                <a class="st-root-link item-company st-has-dropdown nav-link" data-dropdown="industries" href="">Industries</a>
+                <a class="st-root-link nav-link" href="/partner-with-us">Partner with us</a>
+                <a class="st-root-link nav-link" href="/contact">Contact us</a>
+                <a class="st-root-link nav-link" href="/event">Events</a>
+            </li>
+            <!-- Mobile Navigation -->
+            <li class="st-nav-section st-nav-mobile nav-item">
+                <button class="st-root-link navbar-toggler" type="button" aria-expanded="false" aria-controls="navbarMenu" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="st-popup" id="navbarMenu">
+                    <div class="st-popup-container">
+                        <a class="st-popup-close-button">Close</a>
+                        <div id="header-placeholder-mobile" class="st-dropdown-content-group">
+                            <h4 class="text-uppercase regular">Pages</h4>
+                            <a class="regular text-primary" href="/blog"><i class="far fa-building me-2"></i> Business Solutions</a>
+                            <a class="regular text-success" href="/partner-with-us"><i class="far fa-envelope me-2"></i> Partner with Us</a>
+                            <a class="regular text-info" href="/contact"><i class="far fa-envelope me-2"></i> Contact Us</a>
+                            <a class="regular text-info" href="/event"><i class="far fa-calendar-alt me-2"></i> Events</a>
+                        </div>
+                        <div class="st-dropdown-content-group border-top bw-2">
+                            <h4 class="text-uppercase regular">Services</h4>
+                            <div class="row">
+                                <div id="header-services-mobile" class="col me-4">
+                                    <a href="/services/custom-software-development">Custom Software Development</a>
+                                    <a href="/services/business-process-automation">Business Process Automation</a>
+                                    <a href="/services/ai-solutions">AI Solutions &amp; Integrations</a>
+                                    <a href="/services/ai-agents">AI Agents</a>
+                                    <a href="/services/platform-engineering">Platform Engineering</a>
+                                    <a href="/services/it-consulting">IT Consulting</a>
                                 </div>
                             </div>
-                            <!--<div class="st-dropdown-content-group bg-light b-t">
-                                <a href="login.html">Sign in <i class="fas fa-arrow-right"></i></a>
-                            </div>-->
+                        </div>
+                        <div class="st-dropdown-content-group border-top bw-2">
+                            <h4 class="text-uppercase regular">Industries</h4>
+                            <div class="row">
+                                <div id="header-industries-mobile" class="col me-4">
+                                    <a href="/industries-first">B2B and Retail</a>
+                                    <a href="/industries-second">Public Sector &amp; Government</a>
+                                    <a href="/industries-third">Supply Chain &amp; Logistics</a>
+                                    <a href="/industries-fintech">Fintech &amp; Financial Services</a>
+                                    <a href="/industries-maritime">Maritime &amp; Marine Operations</a>
+                                    <a href="/industries-construction">Construction &amp; Heavy Operations</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </li>
-            </ul>
-        </div>
-        <div class="st-dropdown-root">
-            <div class="st-dropdown-bg">
-                <div class="st-alt-bg"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="st-dropdown-root">
+        <div class="st-dropdown-bg"><div class="st-alt-bg"></div></div>
+        <div class="st-dropdown-arrow"></div>
+        <div class="st-dropdown-container">
+            <!-- Services Dropdown -->
+            <div id="header-services" class="st-dropdown-section" data-dropdown="services">
+                <div class="st-dropdown-content">
+                    <div class="st-dropdown-content-group">
+                        <a class="dropdown-item" href="/services/custom-software-development">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-code"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Custom Software Development</h3>
+                                    <p class="m-0 small text-secondary">Bespoke web, mobile and enterprise platforms</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="/services/business-process-automation">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-warning text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-cogs"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Business Process Automation</h3>
+                                    <p class="m-0 small text-secondary">Workflow automation and RPA services UK</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="/services/ai-solutions">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-brain"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">AI Solutions &amp; Integrations</h3>
+                                    <p class="m-0 small text-secondary">Practical AI for UK and European businesses</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="/services/ai-agents">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-robot"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">AI Agents</h3>
+                                    <p class="m-0 small text-secondary">Intelligent agents for business automation</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="/services/platform-engineering">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-dark text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-layer-group"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Platform Engineering</h3>
+                                    <p class="m-0 small text-secondary">Enterprise-grade platform development</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="/services/it-consulting">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-secondary text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-chart-line"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">IT Consulting</h3>
+                                    <p class="m-0 small text-secondary">Digital transformation consultancy UK</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="st-dropdown-arrow"></div>
-            <div class="st-dropdown-container">
-                <div id="header-industries" class="st-dropdown-section" data-dropdown="industries">
-                    <div class="st-dropdown-content">
-                        <div class="st-dropdown-content-group">
-                            <a class="dropdown-item" href="https://mazeqube.com/industries-first">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="bg-dark text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-credit-card"></i></div>
-                                    <div class="flex-fill">
-                                        <h3 class="link-title m-0">B2B and Retail</h3>
-                                        <p class="m-0 small text-secondary">Modern digital platforms and tailored </p>
-                                        <p class="m-0 small text-secondary">software solutions that streamline operations</p>
-                                    </div>
+            <!-- Industries Dropdown -->
+            <div id="header-industries" class="st-dropdown-section" data-dropdown="industries">
+                <div class="st-dropdown-content">
+                    <div class="st-dropdown-content-group">
+                        <a class="dropdown-item" href="https://mazeqube.com/industries-first">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-dark text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-credit-card"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">B2B and Retail</h3>
+                                    <p class="m-0 small text-secondary">Modern digital platforms for UK B2B and retail</p>
                                 </div>
-                            </a>
-                            <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-second">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="bg-secondary text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-users"></i></div>
-                                    <div class="flex-fill">
-                                        <h3 class="link-title m-0">Public Sector & Government</h3>
-                                        <p class="m-0 text-secondary small">Software that strengthen service delivery, improve stakeholder</p>
-                                        <p class="m-0 text-secondary small"> engagement, and support regional economic development.</p>
-                                    </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="https://mazeqube.com/industries-second">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-secondary text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-users"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Public Sector &amp; Government</h3>
+                                    <p class="m-0 text-secondary small">Software for UK and European government organisations</p>
                                 </div>
-                            </a>
-                            <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-third">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="bg-success text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-box"></i></div>
-                                    <div class="flex-fill">
-                                        <h3 class="link-title m-0">Supply Chain & Logistics</h3>
-                                        <p class="m-0 text-secondary small">Solutions that optimise warehouse operations,</p>
-                                        <p class="m-0 text-secondary small">inventory accuracy, and end-to-end fulfilment performance.</p>
-                                    </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="https://mazeqube.com/industries-third">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-box"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Supply Chain &amp; Logistics</h3>
+                                    <p class="m-0 text-secondary small">Optimise warehouse operations and fulfilment</p>
                                 </div>
-                            </a>
-                            <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-four">
-                                <div class="d-flex align-items-center mb-4">
-                                    <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-dollar-sign"></i></div>
-                                    <div class="flex-fill">
-                                        <h3 class="link-title m-0">Fintech & Financial Services</h3>
-                                        <p class="m-0 text-secondary small">Secure, compliant and scalable systems engineered for high-volume</p>
-                                        <p class="m-0 text-secondary small">financial operations and digital banking experiences.</p>
-                                    </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="https://mazeqube.com/industries-fintech">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Fintech &amp; Financial Services</h3>
+                                    <p class="m-0 text-secondary small">Secure, FCA-aware and GDPR-compliant fintech software</p>
                                 </div>
-                            </a>
-                            <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-four">
-                                <div class="d-flex align-items-center mb-4">
-                                    <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-ship"></i></div>
-                                    <div class="flex-fill">
-                                        <h3 class="link-title m-0">Maritime & Marine Operations</h3>
-                                        <p class="m-0 text-secondary small">Software that enhances port workflows, marina management,</p>
-                                        <p class="m-0 text-secondary small">customer services, and vessel administration.</p>
-                                    </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="https://mazeqube.com/industries-maritime">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-ship"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Maritime &amp; Marine Operations</h3>
+                                    <p class="m-0 text-secondary small">Port, marina and vessel management software UK</p>
                                 </div>
-                            </a>
-                            <a class="dropdown-item" target="_blank" href="https://mazeqube.com/industries-four">
-                                <div class="d-flex align-items-center mb-4">
-                                    <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-globe"></i></div>
-                                    <div class="flex-fill">
-                                        <h3 class="link-title m-0">Construction & Heavy Operations</h3>
-                                        <p class="m-0 text-secondary small">Practical, field-ready digital solutions designed to improve planning,</p>
-                                        <p class="m-0 text-secondary small"> operational efficiency and equipment management.</p>
-                                    </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="https://mazeqube.com/industries-construction">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-info text-contrast icon-md center-flex rounded-circle me-2"><i class="fas fa-hard-hat"></i></div>
+                                <div class="flex-fill">
+                                    <h3 class="link-title m-0">Construction &amp; Heavy Operations</h3>
+                                    <p class="m-0 text-secondary small">Field-ready software for UK construction businesses</p>
                                 </div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <main>
         <header class="page header text-contrast bg-primary" style="">
@@ -236,7 +287,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 mx-auto">
-                        <figure class="shadow rounded mb-5"><img class="img-responsive rounded" src="../img/blog/main-third.png" alt=""></figure>
+                        <figure class="shadow rounded mb-5"><img class="img-responsive rounded" src="img/blog/main-third.png" alt=""></figure>
                         <p>
                             Our client from Ohio manages an association overseeing approximately 120 chambers. After a competitive bidding process, we were awarded the project to enhance their data analytics capabilities. The client uses HubSpot CRM for data management, and our task was to extract this data, perform analytics, and provide insights to help the chambers boost their revenue.
                         </p>
