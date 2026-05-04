@@ -1,0 +1,50 @@
+# MazeQube
+
+> MazeQube is a UK-based custom software development and business automation company, founded in 2016 and headquartered in Hounslow, London. We serve UK and European businesses with bespoke software, workflow automation, RPA, AI solutions, AI agents, platform engineering, and IT consulting. Our global delivery team operates on a follow-the-sun model with consulting and client leadership in the UK and a development centre in Pune, India.
+
+## About
+
+MazeQube was founded in 2016 with a mission to design and deliver high-quality, made-to-measure digital platforms for organisations across the UK and Europe. We are registered in England and Wales (Company Number: 16574585) at 19 Chapel Road, Hounslow, London, TW3 1XT. We also operate a registered development centre in Pune, Maharashtra, India.
+
+We have supported clients for over 8 years, with our longest running support contract exceeding 10 years. Our team provides 24/7 monitoring and support for all applications we build and maintain.
+
+Contact: info@mazeqube.com | +44 7424 506062
+
+## Services
+
+- [Custom Software Development](https://mazeqube.com/services/custom-software-development): Bespoke web applications, mobile apps, and enterprise platforms built around client workflows. API-first, cloud-native, GDPR-compliant.
+- [Business Process Automation](https://mazeqube.com/services/business-process-automation): Workflow automation and Robotic Process Automation (RPA) services for UK businesses. Eliminates manual tasks, reduces errors, integrates with legacy systems.
+- [AI Solutions & Integrations](https://mazeqube.com/services/ai-solutions): Practical AI for UK and European businesses — intelligent data extraction, NLP, predictive analytics, recommendation engines, and AI integration into existing software.
+- [AI Agents](https://mazeqube.com/services/ai-agents): Autonomous AI agents that perform multi-step business tasks 24/7 — customer query handling, workflow automation, operational monitoring.
+- [Platform Engineering](https://mazeqube.com/services/platform-engineering): End-to-end development and maintenance of enterprise-grade platforms including WMS/OMS, marine operations, digital gifting, and community platforms.
+- [IT Consulting](https://mazeqube.com/services/it-consulting): Digital transformation consultancy — technology strategy, architecture design, system modernisation, and vendor evaluation for UK organisations.
+
+## Industries
+
+- [B2B and Retail](https://mazeqube.com/b2b-and-retail-software-solutions): Custom ordering, inventory, and customer management platforms for UK B2B and retail businesses.
+- [Public Sector & Government](https://mazeqube.com/public-sector-government-software): Community engagement and information management software for UK and European government organisations.
+- [Supply Chain & Logistics](https://mazeqube.com/supply-chain-logistics-software): Warehouse management, fulfilment, and inventory optimisation platforms for UK logistics businesses.
+- [Fintech & Financial Services](https://mazeqube.com/fintech-financial-services-software): FCA-aware, GDPR-compliant fintech software including payment platforms and core banking extensions.
+- [Maritime & Marine Operations](https://mazeqube.com/maritime-marine-operations-software): Port, marina, and vessel management software for UK maritime businesses.
+- [Construction & Heavy Operations](https://mazeqube.com/construction-software-solutions): Field-ready project management and equipment tracking software for UK construction companies.
+
+## Key Pages
+
+- [Homepage](https://mazeqube.com/)
+- [About Us](https://mazeqube.com/about-us)
+- [Contact](https://mazeqube.com/contact)
+- [FAQ](https://mazeqube.com/faq)
+- [Business Solutions Blog](https://mazeqube.com/blog)
+- [Partner with Us](https://mazeqube.com/partner-with-us)
+- [Events](https://mazeqube.com/event)
+
+## Key Facts
+
+- Founded: 2016
+- Headquarters: Hounslow, London, United Kingdom
+- Company Number: 16574585 (England & Wales)
+- Markets served: United Kingdom, Ireland, Europe
+- Support: 24/7 monitoring and support for all managed applications
+- GDPR: All solutions built GDPR-compliant by design
+- Delivery model: UK consulting + India development centre (follow-the-sun)
+- Longest client partnership: 10+ years
